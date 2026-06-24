@@ -16,7 +16,7 @@
 html{scroll-behavior:smooth;}
 body{background:var(--bg);color:var(--text);font-family:var(--sans);min-height:100vh;-webkit-font-smoothing:antialiased;}
 
-/* ── TOPBAR ── */
+
 .topbar{
   position:sticky;top:0;z-index:100;
   background:rgba(6,1,15,0.9);backdrop-filter:blur(10px);
@@ -31,7 +31,6 @@ body{background:var(--bg);color:var(--text);font-family:var(--sans);min-height:1
 .btn-nav{background:none;border:1px solid var(--border);color:var(--text);width:28px;height:28px;border-radius:6px;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:0.9rem;transition:border-color .2s;}
 .btn-nav:hover{border-color:var(--green);}
 
-/* ── STATS BAR ── */
 .statsbar{
   display:flex;gap:1px;background:var(--border);
   border-bottom:1px solid var(--border);
@@ -47,7 +46,7 @@ body{background:var(--bg);color:var(--text);font-family:var(--sans);min-height:1
 .stat-num.cyan{color:var(--cyan);}
 .stat-num.yellow{color:var(--yellow);}
 
-/* ── FILTERS ── */
+
 .filters{
   padding:0.8rem 1.5rem;
   display:flex;gap:0.5rem;flex-wrap:wrap;align-items:center;
@@ -66,7 +65,7 @@ body{background:var(--bg);color:var(--text);font-family:var(--sans);min-height:1
 .chip[data-filter="kike"].active{border-color:var(--pink);color:var(--pink);background:rgba(255,46,154,0.08);}
 .chip[data-filter="pendiente"].active{border-color:var(--yellow);color:var(--yellow);background:rgba(255,217,61,0.08);}
 
-/* ── GRID ── */
+
 .grid-wrap{overflow-x:auto;padding:1.5rem;}
 .calendar-grid{
   display:grid;
@@ -86,7 +85,6 @@ body{background:var(--bg);color:var(--text);font-family:var(--sans);min-height:1
 .day-header.today .day-name{color:var(--green);}
 .day-header.weekend .day-date{color:var(--muted);}
 
-/* ── CARDS ── */
 .card{
   background:var(--card);border:1px solid var(--border);
   border-radius:8px;padding:0.85rem;
@@ -149,7 +147,6 @@ body{background:var(--bg);color:var(--text);font-family:var(--sans);min-height:1
 .label-approved{background:rgba(168,255,62,0.1);color:var(--green);}
 .label-rejected{background:rgba(255,46,154,0.1);color:var(--pink);}
 
-/* ── MODAL ── */
 .modal-overlay{
   position:fixed;inset:0;z-index:200;
   background:rgba(6,1,15,0.85);backdrop-filter:blur(6px);
@@ -172,14 +169,12 @@ body{background:var(--bg);color:var(--text);font-family:var(--sans);min-height:1
 .modal-actions{display:flex;gap:0.6rem;margin-top:0.5rem;}
 .modal-actions .btn-approve,.modal-actions .btn-reject,.modal-actions .btn-undo{font-size:0.78rem;padding:0.6rem 1rem;}
 
-/* ── EMPTY SLOT ── */
 .empty-slot{
   border:1px dashed var(--faint);border-radius:8px;
   padding:0.9rem;text-align:center;
   font-family:var(--mono);font-size:0.7rem;color:var(--faint);
 }
 
-/* ── SCROLLBAR ── */
 ::-webkit-scrollbar{width:6px;height:6px;}
 ::-webkit-scrollbar-track{background:transparent;}
 ::-webkit-scrollbar-thumb{background:var(--border);border-radius:3px;}
@@ -187,7 +182,6 @@ body{background:var(--bg);color:var(--text);font-family:var(--sans);min-height:1
 </head>
 <body>
 
-<!-- TOPBAR -->
 <div class="topbar">
   <div class="logo">QUANTUMSEC <span>// CONTENT OS</span></div>
   <div class="week-nav">
@@ -197,7 +191,6 @@ body{background:var(--bg);color:var(--text);font-family:var(--sans);min-height:1
   </div>
 </div>
 
-<!-- STATS -->
 <div class="statsbar">
   <div class="stat"><span class="stat-num" id="statTotal">0</span><span class="stat-label">Piezas totales</span></div>
   <div class="stat"><span class="stat-num green" id="statApproved">0</span><span class="stat-label">Aprobadas</span></div>
@@ -205,7 +198,6 @@ body{background:var(--bg);color:var(--text);font-family:var(--sans);min-height:1
   <div class="stat"><span class="stat-num pink" id="statRejected">0</span><span class="stat-label">Rechazadas</span></div>
 </div>
 
-<!-- FILTERS -->
 <div class="filters">
   <span class="filter-label">FILTRAR:</span>
   <button class="chip active" data-filter="all" onclick="setFilter('all',this)">Todo</button>
@@ -216,12 +208,10 @@ body{background:var(--bg);color:var(--text);font-family:var(--sans);min-height:1
   <button class="chip" data-filter="pendiente" onclick="setFilter('pendiente',this)">⏳ Pendientes</button>
 </div>
 
-<!-- GRID -->
 <div class="grid-wrap">
   <div class="calendar-grid" id="calendarGrid"></div>
 </div>
 
-<!-- MODAL -->
 <div class="modal-overlay" id="modalOverlay" onclick="closeModal(event)">
   <div class="modal" id="modal">
     <div class="modal-header">
@@ -249,15 +239,10 @@ body{background:var(--bg);color:var(--text);font-family:var(--sans);min-height:1
 </div>
 
 <script>
-// ─── DATOS DE CONTENIDO ───────────────────────────────────────────────────────
-// Aquí puedes añadir, editar o quitar piezas. Cada pieza tiene:
-// dayOffset: 0=lunes, 1=martes ... 6=domingo
-// type: 'linkedin' | 'carrusel' | 'animado' | 'kike' | 'short'
-// platforms: array con 'LinkedIn', 'Instagram', 'Reels', 'TikTok'
-// status: 'pending' | 'approved' | 'rejected'
+
 
 const CONTENT = [
-  // ── LUNES ──
+
   {
     id:1, dayOffset:0,
     type:'kike', platforms:['LinkedIn','Reels'],
@@ -275,7 +260,6 @@ const CONTENT = [
     status:'pending'
   },
 
-  // ── MARTES ──
   {
     id:3, dayOffset:1,
     type:'kike', platforms:['LinkedIn','Reels'],
@@ -293,7 +277,6 @@ const CONTENT = [
     status:'pending'
   },
 
-  // ── MIÉRCOLES ──
   {
     id:5, dayOffset:2,
     type:'kike', platforms:['LinkedIn','Reels'],
@@ -311,7 +294,6 @@ const CONTENT = [
     status:'pending'
   },
 
-  // ── JUEVES ──
   {
     id:7, dayOffset:3,
     type:'kike', platforms:['LinkedIn','Reels'],
@@ -329,7 +311,6 @@ const CONTENT = [
     status:'pending'
   },
 
-  // ── VIERNES ──
   {
     id:9, dayOffset:4,
     type:'kike', platforms:['LinkedIn','Reels'],
@@ -347,7 +328,6 @@ const CONTENT = [
     status:'pending'
   },
 
-  // ── SÁBADO ──
   {
     id:11, dayOffset:5,
     type:'kike', platforms:['LinkedIn','Reels'],
@@ -365,7 +345,6 @@ const CONTENT = [
     status:'pending'
   },
 
-  // ── DOMINGO ──
   {
     id:13, dayOffset:6,
     type:'kike', platforms:['LinkedIn','Reels'],
@@ -376,14 +355,12 @@ const CONTENT = [
   },
 ];
 
-// ─── ESTADO ──────────────────────────────────────────────────────────────────
 let weekOffset = 0;
 let activeFilter = 'all';
 let openCardId = null;
-const states = {}; // { id: 'pending'|'approved'|'rejected' }
+const states = {}; 
 CONTENT.forEach(c => states[c.id] = c.status);
 
-// ─── SEMANA ───────────────────────────────────────────────────────────────────
 function getMonday(offset = 0) {
   const now = new Date();
   const day = now.getDay();
@@ -403,7 +380,6 @@ function changeWeek(dir) {
   render();
 }
 
-// ─── BADGES ──────────────────────────────────────────────────────────────────
 const TYPE_LABEL = {
   linkedin:'Post LinkedIn', carrusel:'Carrusel Instagram',
   animado:'Vídeo animado', kike:'Vídeo', short:'Short vertical'
@@ -414,7 +390,6 @@ const TYPE_CLASS = {
 };
 const DAYS = ['Lunes','Martes','Miércoles','Jueves','Viernes','Sábado','Domingo'];
 
-// ─── FILTRO ───────────────────────────────────────────────────────────────────
 function setFilter(f, el) {
   activeFilter = f;
   document.querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
@@ -428,7 +403,6 @@ function matchesFilter(card) {
   return card.type === activeFilter;
 }
 
-// ─── ACCIONES ─────────────────────────────────────────────────────────────────
 function approve(id, e) {
   e && e.stopPropagation();
   states[id] = 'approved';
@@ -448,7 +422,6 @@ function undo(id, e) {
   if (openCardId === id) openModal(id);
 }
 
-// ─── MODAL ────────────────────────────────────────────────────────────────────
 function openModal(id) {
   const card = CONTENT.find(c => c.id === id);
   if (!card) return;
@@ -478,14 +451,12 @@ function closeModalDirect() {
 }
 document.addEventListener('keydown', e => { if(e.key==='Escape') closeModalDirect(); });
 
-// ─── RENDER ───────────────────────────────────────────────────────────────────
 function render() {
   const monday = getMonday(weekOffset);
   const sunday = new Date(monday); sunday.setDate(monday.getDate() + 6);
   document.getElementById('weekLabel').textContent =
     formatDate(monday) + ' – ' + formatDate(sunday);
 
-  // stats
   const all = CONTENT;
   document.getElementById('statTotal').textContent = all.length;
   document.getElementById('statApproved').textContent = all.filter(c=>states[c.id]==='approved').length;
@@ -505,13 +476,13 @@ function render() {
     const col = document.createElement('div');
     col.className = 'day-col';
 
-    // header
+  
     const hdr = document.createElement('div');
     hdr.className = 'day-header' + (isToday?' today':'') + (isWeekend?' weekend':'');
     hdr.innerHTML = `<span class="day-name">${DAYS[d]}</span><span class="day-date">${formatDate(date)}</span>`;
     col.appendChild(hdr);
 
-    // cards
+    
     const dayCards = CONTENT.filter(c => c.dayOffset === d && matchesFilter(c));
     if (dayCards.length === 0) {
       const empty = document.createElement('div');
