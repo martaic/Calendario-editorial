@@ -88,6 +88,7 @@ body{background:var(--bg);color:var(--text);font-family:var(--sans);min-height:1
 .prod-step.active-enproduccion{background:rgba(255,140,66,0.18);color:var(--orange);}
 .prod-step.active-listo{background:rgba(41,241,255,0.15);color:var(--cyan);}
 
+/* Nota de estado en tarjeta */
 .prod-note{font-size:0.72rem;color:var(--muted);font-style:italic;line-height:1.4;padding:0.3rem 0.5rem;background:rgba(0,0,0,0.2);border-radius:4px;border-left:2px solid var(--border);}
 .prod-note.note-sinempezar{border-left-color:rgba(240,235,255,0.2);}
 .prod-note.note-enproduccion{border-left-color:var(--orange);color:rgba(255,140,66,0.85);}
@@ -212,9 +213,11 @@ const PROD_STEPS = [
 ];
 
 const CONTENT = [
+  // ── SEMANA ACTUAL (23-29 jun) — solo finde ───────────────────────────────
   { id:13, week:0, dayOffset:5, type:'kike',     platforms:['LinkedIn','Reels'], title:'Kike: El factor diferencial de QuantumSec',   desc:'.', notes:'Vídeo ya editado. Overlay con bullets animados. Pieza clave de marca.',         status:'pending',  prod:'enproduccion', prodNote:'Editado la velocidad de las animaciones.' },
   { id:3,  week:0, dayOffset:6, type:'kike',     platforms:['LinkedIn','Reels'], title:'Kike: Defacement — cuando hackean tu web',     desc:'.', notes:'Vídeo ya editado. Comprobar overlay de ejemplos visuales.',                      status:'pending',  prod:'enproduccion', prodNote:'Editado la velocidad de las animaciones.' },
 
+  // ── SEMANA DEL 30 JUN AL 6 JUL ───────────────────────────────────────────
   { id:5,  week:1, dayOffset:0, type:'kike',     platforms:['LinkedIn','Reels'], title:'Kike: Seguridad para Startups',               desc:'.', notes:'Vídeo ya editado. Overlay con 5 puntos clave para startups.',                    status:'pending',  prod:'enproduccion', prodNote:'Editado la velocidad de las animaciones.' },
   { id:6,  week:1, dayOffset:0, type:'animado',  platforms:['Reels','LinkedIn'], title:'Vídeo animado: Los 5 errores en startups',    desc:'Explainer animado Remotion con los 5 puntos del vídeo de Kike.',                          notes:'SVG animado. Sin voz — subtítulos grandes. 1080x1920.',                 status:'pending',  prod:'sinempezar',   prodNote:'Pendiente de empezar. Se creará una vez aprobado el vídeo de Kike.' },
   { id:7,  week:1, dayOffset:1, type:'kike',     platforms:['LinkedIn','Reels'], title:'Kike: WordPress y sus riesgos de seguridad',  desc:'.', notes:'Vídeo ya editado. Overlay con datos de vulnerabilidades WordPress 2026.',        status:'pending',  prod:'enproduccion', prodNote:'Editado la velocidad de las animaciones.' },
@@ -271,15 +274,17 @@ function openModal(id){
   document.getElementById('modalDesc').textContent=card.desc;
   document.getElementById('modalNotes').textContent=card.notes;
 
+  // Pipeline buttons
   document.getElementById('modalPipeline').innerHTML=PROD_STEPS.map(step=>`
     <button class="modal-prod-btn ${prod===step.key?step.cls:''}" onclick="setProd(${id},'${step.key}',event)">${step.label}</button>
   `).join('');
 
+  // Nota de estado
   const noteEl=document.getElementById('modalProdNote');
   noteEl.className=`modal-prod-note note-${prod}`;
   noteEl.textContent=prodNotes[id]||'';
 
-
+  // Acciones revisión
   const ma=document.getElementById('modalActions');
   if(prod!=='listo'){
     ma.innerHTML=`<div style="font-family:var(--mono);font-size:0.75rem;color:var(--muted);padding:0.4rem 0;">Marca como "Listo para revisar" para poder aprobar o rechazar.</div>`;
@@ -334,7 +339,7 @@ function render(){
 
         const pipelineHTML=`<div class="prod-pipeline" onclick="event.stopPropagation()">${PROD_STEPS.map(step=>`<div class="prod-step ${prod===step.key?step.cls:''}" onclick="setProd(${card.id},'${step.key}',event)" title="${step.label}">${step.label}</div>`).join('')}</div>`;
 
-  
+        // Nota breve en tarjeta
         const noteHTML=`<div class="prod-note note-${prod}" onclick="event.stopPropagation()">${prodNotes[card.id]||''}</div>`;
 
         let actionsHTML='';
