@@ -212,28 +212,21 @@ const PROD_STEPS = [
 ];
 
 const CONTENT = [
+  { id:13, week:0, dayOffset:5, type:'kike',     platforms:['LinkedIn','Reels'], title:'Kike: El factor diferencial de QuantumSec',   desc:'.', notes:'Vídeo ya editado. Overlay con bullets animados. Pieza clave de marca.',         status:'pending',  prod:'enproduccion', prodNote:'Editado la velocidad de las animaciones.' },
+  { id:3,  week:0, dayOffset:6, type:'kike',     platforms:['LinkedIn','Reels'], title:'Kike: Defacement — cuando hackean tu web',     desc:'.', notes:'Vídeo ya editado. Comprobar overlay de ejemplos visuales.',                      status:'pending',  prod:'enproduccion', prodNote:'Editado la velocidad de las animaciones.' },
 
-  { id:1,  dayOffset:0, type:'kike',     platforms:['LinkedIn','Reels'], title:'Kike: Phishing — cómo reconocerlo',               desc:'.', notes:'Vídeo ya editado. Revisar que el overlay esté sincronizado antes de aprobar. 1080x1920 para Reels.',    status:'pending', prod:'enproduccion', prodNote:'En producción: mejorando la velocidad y fluidez de las animaciones para mayor retención.' },
-  { id:2,  dayOffset:0, type:'carrusel', platforms:['Reels'],            title:'Carrusel vertical: Phishing — señales de alerta',  desc:'Carrusel vertical complementario al vídeo de Kike. Refuerza los puntos clave en formato estático.',         notes:'Formato vertical 1080x1920. Mismo tema que el vídeo del lunes para coherencia editorial.',                status:'pending', prod:'sinempezar',   prodNote:'Pendiente de empezar. ' },
-  
-  { id:3,  dayOffset:1, type:'kike',     platforms:['LinkedIn','Reels'], title:'Kike: Defacement — cuando hackean tu web',         desc:'.', notes:'Vídeo ya editado. Comprobar overlay de ejemplos visuales. Subtítulos Faster-Whisper.',                   status:'pending', prod:'enproduccion', prodNote:'En producción: mejorando la velocidad y fluidez de las animaciones para mayor retención.' },
-  { id:4,  dayOffset:1, type:'linkedin', platforms:['LinkedIn'],         title:'Post: Tu web puede estar hackeada y no saberlo',   desc:'Post de texto complementario al vídeo de defacement. Explicación práctica y CTA a auditoría.',               notes:'Generar con content_multiplier.py usando el tema defacement. Tono directo.',                              status:'pending', prod:'sinempezar',   prodNote:'Pendiente de redactar. ' },
-
-  { id:5,  dayOffset:2, type:'kike',     platforms:['LinkedIn','Reels'], title:'Kike: Seguridad para Startups',                    desc:'.', notes:'Vídeo ya editado. Overlay con 5 puntos clave para startups. Paleta corporativa.',                        status:'pending', prod:'enproduccion', prodNote:'En producción: mejorando la velocidad y fluidez de las animaciones para mayor retención.' },
-  { id:6,  dayOffset:2, type:'animado',  platforms:['Reels','LinkedIn'], title:'Vídeo animado: Los 5 errores de seguridad en startups', desc:'Explainer animado Remotion con los 5 puntos del vídeo de Kike, desarrollados visualmente. Vertical para Reels.', notes:'Componente explainer nuevo. SVG animado. Sin voz — subtítulos grandes. 1080x1920.',                  status:'pending', prod:'sinempezar',   prodNote:'Pendiente de empezar..' },
-
-  { id:7,  dayOffset:3, type:'kike',     platforms:['LinkedIn','Reels'], title:'Kike: WordPress y sus riesgos de seguridad',       desc:'.', notes:'Vídeo ya editado. Overlay con porcentajes y datos de vulnerabilidades WordPress 2026.',                  status:'pending', prod:'enproduccion', prodNote:'En producción: mejorando la velocidad y fluidez de las animaciones para mayor retención.' },
-  { id:8,  dayOffset:3, type:'carrusel', platforms:['Reels'],            title:'Carrusel vertical: WordPress — qué revisar ahora', desc:'Carrusel vertical con checklist de seguridad para webs WordPress. Complementa el vídeo de Kike.',              notes:'Formato vertical 1080x1920. Misma línea visual que el carrusel de phishing.',                             status:'pending', prod:'sinempezar',   prodNote:'Pendiente de empezar. ' },
-
-  { id:9,  dayOffset:4, type:'kike',     platforms:['LinkedIn','Reels'], title:'Kike: Horquilla de precios en auditorías',         desc:'.', notes:'Vídeo ya editado. Overlay con rangos de precios animados. Muy útil para captar leads.',                  status:'pending', prod:'enproduccion', prodNote:'En producción: mejorando la velocidad y fluidez de las animaciones para mayor retención.' },
-  { id:10, dayOffset:4, type:'linkedin', platforms:['LinkedIn'],         title:'Post: ¿Cuánto cuesta una auditoría de seguridad?', desc:'Post de texto desglosando los rangos de precio y qué incluye cada nivel.',                                      notes:'Generar con content_multiplier.py. CTA directo a contacto QuantumSec.',                                  status:'pending', prod:'sinempezar',   prodNote:'Pendiente de redactar.' },
- 
-  { id:11, dayOffset:5, type:'kike',     platforms:['LinkedIn','Reels'], title:'Kike: ¿Cuánto dura una auditoría?',                desc:'.', notes:'Vídeo ya editado. Overlay con timeline visual de fases. Buen contenido para el fin de semana.',          status:'pending', prod:'enproduccion', prodNote:'En producción: mejorando la velocidad y fluidez de las animaciones para mayor retención.' },
-  { id:12, dayOffset:5, type:'animado',  platforms:['Reels'],            title:'Vídeo animado: Fases de una auditoría en 60 segundos', desc:'Explainer vertical animado resumiendo las fases de una auditoría.',                                          notes:'Formato 1080x1920. Animación de timeline. Sin voz, subtítulos grandes.',                                 status:'pending', prod:'sinempezar',   prodNote:'Pendiente de empezar.' },
-  
-  { id:13, dayOffset:6, type:'kike',     platforms:['LinkedIn','Reels'], title:'Kike: El factor diferencial de QuantumSec',        desc:'.', notes:'Vídeo ya editado. Overlay con bullets animados. Pieza clave de marca — revisar bien.',                  status:'pending', prod:'enproduccion', prodNote:'En producción: mejorando la velocidad y fluidez de las animaciones para mayor retención.' },
+  { id:5,  week:1, dayOffset:0, type:'kike',     platforms:['LinkedIn','Reels'], title:'Kike: Seguridad para Startups',               desc:'.', notes:'Vídeo ya editado. Overlay con 5 puntos clave para startups.',                    status:'pending',  prod:'enproduccion', prodNote:'Editado la velocidad de las animaciones.' },
+  { id:6,  week:1, dayOffset:0, type:'animado',  platforms:['Reels','LinkedIn'], title:'Vídeo animado: Los 5 errores en startups',    desc:'Explainer animado Remotion con los 5 puntos del vídeo de Kike.',                          notes:'SVG animado. Sin voz — subtítulos grandes. 1080x1920.',                 status:'pending',  prod:'sinempezar',   prodNote:'Pendiente de empezar. Se creará una vez aprobado el vídeo de Kike.' },
+  { id:7,  week:1, dayOffset:1, type:'kike',     platforms:['LinkedIn','Reels'], title:'Kike: WordPress y sus riesgos de seguridad',  desc:'.', notes:'Vídeo ya editado. Overlay con datos de vulnerabilidades WordPress 2026.',        status:'pending',  prod:'enproduccion', prodNote:'Editado la velocidad de las animaciones.' },
+  { id:8,  week:1, dayOffset:1, type:'carrusel', platforms:['Reels'],            title:'Carrusel: WordPress — qué revisar ahora',     desc:'Checklist de seguridad para webs WordPress.',                                             notes:'Formato vertical 1080x1920.',                                           status:'pending',  prod:'sinempezar',   prodNote:'Pendiente de empezar. Se creará una vez aprobado el vídeo de Kike.' },
+  { id:9,  week:1, dayOffset:2, type:'kike',     platforms:['LinkedIn','Reels'], title:'Kike: Horquilla de precios en auditorías',    desc:'.', notes:'Vídeo ya editado. Overlay con rangos de precios animados.',                    status:'pending',  prod:'enproduccion', prodNote:'Editado la velocidad de las animaciones.' },
+  { id:10, week:1, dayOffset:2, type:'linkedin', platforms:['LinkedIn'],         title:'Post: ¿Cuánto cuesta una auditoría?',         desc:'Post desglosando rangos de precio y qué incluye cada nivel.',                            notes:'Generar con content_multiplier.py. CTA directo a contacto QuantumSec.',  status:'pending',  prod:'sinempezar',   prodNote:'Pendiente de redactar. Se generará una vez aprobado el vídeo del miércoles.' },
+  { id:11, week:1, dayOffset:3, type:'kike',     platforms:['LinkedIn','Reels'], title:'Kike: ¿Cuánto dura una auditoría?',           desc:'.', notes:'Vídeo ya editado. Overlay con timeline visual de fases.',                      status:'pending',  prod:'enproduccion', prodNote:'Editado la velocidad de las animaciones.' },
+  { id:12, week:1, dayOffset:3, type:'animado',  platforms:['Reels'],            title:'Vídeo animado: Fases de una auditoría',       desc:'Explainer vertical animado resumiendo las fases de una auditoría.',                       notes:'Animación de timeline. Sin voz, subtítulos grandes.',                   status:'pending',  prod:'sinempezar',   prodNote:'Pendiente de empezar. Se creará una vez aprobado el vídeo de Kike.' },
+  { id:14, week:1, dayOffset:4, type:'animado',  platforms:['Reels','LinkedIn'], title:'Vídeo animado: FortiBleed — 75.000 firewalls expuestos', desc:'Explainer animado sobre la campaña FortiBleed que dejó al descubierto 75.000 cortafuegos Fortinet. Muy relevante para empresas.', notes:'Tema de actualidad junio 2026. Estilo ZERO DAY. Sin voz, subtítulos grandes. 1080x1920.', status:'pending', prod:'sinempezar', prodNote:'Pendiente de empezar. Tema: campaña FortiBleed — 75.000 firewalls Fortinet expuestos globalmente.' },
+  { id:2,  week:1, dayOffset:5, type:'carrusel', platforms:['Reels'],            title:'Carrusel: Phishing — señales de alerta',      desc:'Carrusel vertical complementario al vídeo de Kike de phishing.',                         notes:'Formato vertical 1080x1920.',                                           status:'pending',  prod:'sinempezar',   prodNote:'Pendiente de empezar. Se diseñará una vez aprobado el vídeo de Kike.' },
+  { id:4,  week:1, dayOffset:5, type:'linkedin', platforms:['LinkedIn'],         title:'Post: Tu web puede estar hackeada',           desc:'Post complementario al vídeo de defacement.',                                            notes:'Generar con content_multiplier.py. Tono directo.',                      status:'pending',  prod:'sinempezar',   prodNote:'Pendiente de redactar. Se generará una vez aprobado el vídeo de Kike.' },
 ];
-
 const TYPE_LABEL = { linkedin:'Post LinkedIn', carrusel:'Carrusel Instagram', animado:'Vídeo animado', kike:'Vídeo', short:'Short vertical' };
 const TYPE_CLASS  = { linkedin:'badge-linkedin', carrusel:'badge-carrusel', animado:'badge-animado', kike:'badge-kike', short:'badge-short' };
 const DAYS = ['Lunes','Martes','Miércoles','Jueves','Viernes','Sábado','Domingo'];
@@ -245,6 +238,7 @@ CONTENT.forEach(c=>{ states[c.id]=c.status; prods[c.id]=c.prod; prodNotes[c.id]=
 function getMonday(offset=0){const now=new Date(),day=now.getDay(),diff=(day===0?-6:1-day),m=new Date(now);m.setDate(now.getDate()+diff+offset*7);m.setHours(0,0,0,0);return m;}
 function formatDate(d){return d.toLocaleDateString('es-ES',{day:'2-digit',month:'short'});}
 function changeWeek(dir){weekOffset+=dir;render();}
+function getWeekCards(weekIdx){return CONTENT.filter(c=>c.week===weekIdx);}
 
 function setFilter(f,el){activeFilter=f;document.querySelectorAll('.chip').forEach(c=>c.classList.remove('active'));el.classList.add('active');render();}
 
@@ -277,7 +271,6 @@ function openModal(id){
   document.getElementById('modalDesc').textContent=card.desc;
   document.getElementById('modalNotes').textContent=card.notes;
 
-
   document.getElementById('modalPipeline').innerHTML=PROD_STEPS.map(step=>`
     <button class="modal-prod-btn ${prod===step.key?step.cls:''}" onclick="setProd(${id},'${step.key}',event)">${step.label}</button>
   `).join('');
@@ -307,11 +300,12 @@ function render(){
   const monday=getMonday(weekOffset),sunday=new Date(monday);
   sunday.setDate(monday.getDate()+6);
   document.getElementById('weekLabel').textContent=formatDate(monday)+' – '+formatDate(sunday);
-  document.getElementById('statTotal').textContent=CONTENT.length;
-  document.getElementById('statApproved').textContent=CONTENT.filter(c=>states[c.id]==='approved').length;
-  document.getElementById('statPending').textContent=CONTENT.filter(c=>prods[c.id]==='listo'&&states[c.id]==='pending').length;
-  document.getElementById('statProd').textContent=CONTENT.filter(c=>prods[c.id]==='enproduccion').length;
-  document.getElementById('statRejected').textContent=CONTENT.filter(c=>states[c.id]==='rejected').length;
+  const weekCards=CONTENT.filter(c=>c.week===weekOffset);
+  document.getElementById('statTotal').textContent=weekCards.length;
+  document.getElementById('statApproved').textContent=weekCards.filter(c=>states[c.id]==='approved').length;
+  document.getElementById('statPending').textContent=weekCards.filter(c=>prods[c.id]==='listo'&&states[c.id]==='pending').length;
+  document.getElementById('statProd').textContent=weekCards.filter(c=>prods[c.id]==='enproduccion').length;
+  document.getElementById('statRejected').textContent=weekCards.filter(c=>states[c.id]==='rejected').length;
 
   const grid=document.getElementById('calendarGrid');
   grid.innerHTML='';
@@ -326,7 +320,7 @@ function render(){
     hdr.innerHTML=`<span class="day-name">${DAYS[d]}</span><span class="day-date">${formatDate(date)}</span>`;
     col.appendChild(hdr);
 
-    const dayCards=CONTENT.filter(c=>c.dayOffset===d&&matchesFilter(c));
+    const dayCards=CONTENT.filter(c=>c.week===weekOffset&&c.dayOffset===d&&matchesFilter(c));
     if(dayCards.length===0){
       const empty=document.createElement('div');empty.className='empty-slot';
       empty.textContent=activeFilter==='all'?'— sin piezas —':'— nada para este filtro —';
@@ -340,7 +334,7 @@ function render(){
 
         const pipelineHTML=`<div class="prod-pipeline" onclick="event.stopPropagation()">${PROD_STEPS.map(step=>`<div class="prod-step ${prod===step.key?step.cls:''}" onclick="setProd(${card.id},'${step.key}',event)" title="${step.label}">${step.label}</div>`).join('')}</div>`;
 
-        // Nota breve en tarjeta
+  
         const noteHTML=`<div class="prod-note note-${prod}" onclick="event.stopPropagation()">${prodNotes[card.id]||''}</div>`;
 
         let actionsHTML='';
