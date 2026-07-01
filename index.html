@@ -16,7 +16,6 @@
 *{box-sizing:border-box;margin:0;padding:0;}
 html{scroll-behavior:smooth;}
 body{background:var(--bg);color:var(--text);font-family:var(--sans);min-height:100vh;-webkit-font-smoothing:antialiased;}
-
 .topbar{position:sticky;top:0;z-index:100;background:rgba(6,1,15,0.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--border);padding:0.9rem 1.5rem;display:flex;align-items:center;gap:1rem;flex-wrap:wrap;}
 .logo{font-family:var(--mono);font-size:0.85rem;font-weight:600;letter-spacing:0.1em;color:var(--green);}
 .logo span{color:var(--muted);}
@@ -24,17 +23,11 @@ body{background:var(--bg);color:var(--text);font-family:var(--sans);min-height:1
 .week-label{font-family:var(--mono);font-size:0.8rem;color:var(--muted);}
 .btn-nav{background:none;border:1px solid var(--border);color:var(--text);width:28px;height:28px;border-radius:6px;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:0.9rem;transition:border-color .2s;}
 .btn-nav:hover{border-color:var(--green);}
-
 .statsbar{display:flex;gap:1px;background:var(--border);border-bottom:1px solid var(--border);}
 .stat{flex:1;background:var(--panel);padding:0.8rem 1rem;display:flex;flex-direction:column;gap:0.2rem;}
 .stat-num{font-family:var(--mono);font-size:1.4rem;font-weight:600;}
 .stat-label{font-size:0.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.08em;}
-.stat-num.green{color:var(--green);}
-.stat-num.pink{color:var(--pink);}
-.stat-num.cyan{color:var(--cyan);}
-.stat-num.yellow{color:var(--yellow);}
-.stat-num.orange{color:var(--orange);}
-
+.stat-num.green{color:var(--green);}.stat-num.pink{color:var(--pink);}.stat-num.cyan{color:var(--cyan);}.stat-num.yellow{color:var(--yellow);}.stat-num.orange{color:var(--orange);}
 .filters{padding:0.8rem 1.5rem;display:flex;gap:0.5rem;flex-wrap:wrap;align-items:center;border-bottom:1px solid var(--border);background:var(--panel);}
 .filter-label{font-size:0.75rem;color:var(--muted);font-family:var(--mono);margin-right:0.3rem;}
 .chip{font-size:0.72rem;font-family:var(--mono);border:1px solid var(--border);border-radius:999px;padding:0.3rem 0.75rem;cursor:pointer;background:transparent;color:var(--muted);transition:all .2s;}
@@ -43,7 +36,6 @@ body{background:var(--bg);color:var(--text);font-family:var(--sans);min-height:1
 .chip[data-filter="pendiente"].active{border-color:var(--yellow);color:var(--yellow);background:rgba(255,217,61,0.08);}
 .chip[data-filter="en-produccion"].active{border-color:var(--orange);color:var(--orange);background:rgba(255,140,66,0.08);}
 .chip[data-filter="sin-empezar"].active{border-color:var(--muted);color:var(--text);background:rgba(240,235,255,0.06);}
-
 .grid-wrap{overflow-x:auto;padding:1.5rem;}
 .calendar-grid{display:grid;grid-template-columns:repeat(7,minmax(210px,1fr));gap:1rem;min-width:1400px;}
 .day-col{display:flex;flex-direction:column;gap:0.6rem;}
@@ -53,15 +45,11 @@ body{background:var(--bg);color:var(--text);font-family:var(--sans);min-height:1
 .day-header.today{border-color:var(--green);background:rgba(168,255,62,0.05);}
 .day-header.today .day-name{color:var(--green);}
 .day-header.weekend .day-date{color:var(--muted);}
-
 .card{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:0.85rem;display:flex;flex-direction:column;gap:0.55rem;transition:transform .2s,box-shadow .2s;cursor:pointer;position:relative;}
 .card:hover{transform:translateY(-2px);}
-.card.approved{border-left:3px solid var(--green);}
-.card.approved:hover{box-shadow:0 8px 24px -8px rgba(168,255,62,0.3);}
+.card.approved{border-left:3px solid var(--green);}.card.approved:hover{box-shadow:0 8px 24px -8px rgba(168,255,62,0.3);}
 .card.rejected{border-left:3px solid var(--pink);opacity:0.6;}
-.card.pending{border-left:3px solid var(--yellow);}
-.card.pending:hover{box-shadow:0 8px 24px -8px rgba(255,217,61,0.2);}
-
+.card.pending{border-left:3px solid var(--yellow);}.card.pending:hover{box-shadow:0 8px 24px -8px rgba(255,217,61,0.2);}
 .card-top{display:flex;align-items:flex-start;gap:0.5rem;justify-content:space-between;}
 .type-badge{font-family:var(--mono);font-size:0.62rem;letter-spacing:0.06em;text-transform:uppercase;border-radius:999px;padding:0.22rem 0.6rem;white-space:nowrap;flex-shrink:0;}
 .badge-linkedin{background:rgba(41,241,255,0.15);color:var(--cyan);border:1px solid rgba(41,241,255,0.3);}
@@ -69,31 +57,21 @@ body{background:var(--bg);color:var(--text);font-family:var(--sans);min-height:1
 .badge-animado{background:rgba(168,255,62,0.15);color:var(--green);border:1px solid rgba(168,255,62,0.3);}
 .badge-kike{background:rgba(255,46,154,0.15);color:var(--pink);border:1px solid rgba(255,46,154,0.3);}
 .badge-short{background:rgba(255,217,61,0.15);color:var(--yellow);border:1px solid rgba(255,217,61,0.3);}
-
 .status-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0;margin-top:3px;}
-.dot-pending{background:var(--yellow);}
-.dot-approved{background:var(--green);}
-.dot-rejected{background:var(--pink);}
-
+.dot-pending{background:var(--yellow);}.dot-approved{background:var(--green);}.dot-rejected{background:var(--pink);}
 .card-title{font-weight:600;font-size:0.88rem;line-height:1.35;}
-
 .platforms{display:flex;gap:0.35rem;flex-wrap:wrap;}
 .platform{font-family:var(--mono);font-size:0.62rem;border:1px solid var(--faint);border-radius:4px;padding:0.15rem 0.45rem;color:var(--muted);}
-
 .prod-pipeline{display:flex;align-items:center;background:rgba(0,0,0,0.3);border:1px solid var(--border);border-radius:6px;overflow:hidden;margin-top:0.1rem;}
 .prod-step{flex:1;text-align:center;font-family:var(--mono);font-size:0.58rem;letter-spacing:0.03em;padding:0.28rem 0.2rem;color:var(--muted);border-right:1px solid var(--border);cursor:pointer;transition:all .15s;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;user-select:none;}
-.prod-step:last-child{border-right:none;}
-.prod-step:hover{background:rgba(240,235,255,0.06);}
+.prod-step:last-child{border-right:none;}.prod-step:hover{background:rgba(240,235,255,0.06);}
 .prod-step.active-sinempezar{background:rgba(240,235,255,0.08);color:var(--text);}
 .prod-step.active-enproduccion{background:rgba(255,140,66,0.18);color:var(--orange);}
 .prod-step.active-listo{background:rgba(41,241,255,0.15);color:var(--cyan);}
-
-/* Nota de estado en tarjeta */
 .prod-note{font-size:0.72rem;color:var(--muted);font-style:italic;line-height:1.4;padding:0.3rem 0.5rem;background:rgba(0,0,0,0.2);border-radius:4px;border-left:2px solid var(--border);}
 .prod-note.note-sinempezar{border-left-color:rgba(240,235,255,0.2);}
 .prod-note.note-enproduccion{border-left-color:var(--orange);color:rgba(255,140,66,0.85);}
 .prod-note.note-listo{border-left-color:var(--cyan);color:rgba(41,241,255,0.8);}
-
 .card-actions{display:flex;gap:0.5rem;margin-top:0.1rem;}
 .btn-approve,.btn-reject,.btn-undo{font-family:var(--mono);font-size:0.68rem;letter-spacing:0.04em;border-radius:6px;padding:0.38rem 0.7rem;cursor:pointer;border:1px solid;transition:all .2s;flex:1;text-align:center;}
 .btn-approve{background:rgba(168,255,62,0.1);border-color:rgba(168,255,62,0.4);color:var(--green);}
@@ -102,11 +80,9 @@ body{background:var(--bg);color:var(--text);font-family:var(--sans);min-height:1
 .btn-reject:hover{background:rgba(255,46,154,0.18);}
 .btn-undo{background:rgba(240,235,255,0.05);border-color:var(--border);color:var(--muted);}
 .btn-undo:hover{border-color:var(--muted);}
-
 .status-label{font-family:var(--mono);font-size:0.68rem;text-align:center;padding:0.35rem;border-radius:6px;}
 .label-approved{background:rgba(168,255,62,0.1);color:var(--green);}
 .label-rejected{background:rgba(255,46,154,0.1);color:var(--pink);}
-
 .modal-overlay{position:fixed;inset:0;z-index:200;background:rgba(6,1,15,0.85);backdrop-filter:blur(6px);display:none;align-items:center;justify-content:center;padding:1.5rem;}
 .modal-overlay.open{display:flex;}
 .modal{background:var(--panel);border:1px solid var(--border);border-radius:12px;max-width:540px;width:100%;padding:1.5rem;display:flex;flex-direction:column;gap:1rem;max-height:90vh;overflow-y:auto;}
@@ -119,27 +95,21 @@ body{background:var(--bg);color:var(--text);font-family:var(--sans);min-height:1
 .modal-section-content{font-size:0.9rem;line-height:1.55;color:var(--text);}
 .modal-actions{display:flex;gap:0.6rem;margin-top:0.5rem;}
 .modal-actions .btn-approve,.modal-actions .btn-reject,.modal-actions .btn-undo{font-size:0.78rem;padding:0.6rem 1rem;}
-
 .modal-pipeline{display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:0.3rem;}
 .modal-prod-btn{font-family:var(--mono);font-size:0.72rem;border:1px solid var(--border);border-radius:6px;padding:0.45rem 0.9rem;cursor:pointer;background:transparent;color:var(--muted);transition:all .2s;}
 .modal-prod-btn:hover{border-color:var(--text);color:var(--text);}
 .modal-prod-btn.active-sinempezar{border-color:var(--text);color:var(--text);background:rgba(240,235,255,0.08);}
 .modal-prod-btn.active-enproduccion{border-color:var(--orange);color:var(--orange);background:rgba(255,140,66,0.12);}
 .modal-prod-btn.active-listo{border-color:var(--cyan);color:var(--cyan);background:rgba(41,241,255,0.12);}
-
 .modal-prod-note{font-size:0.82rem;line-height:1.5;padding:0.6rem 0.8rem;border-radius:6px;margin-top:0.2rem;}
 .modal-prod-note.note-sinempezar{background:rgba(240,235,255,0.05);border:1px solid rgba(240,235,255,0.1);color:var(--muted);}
 .modal-prod-note.note-enproduccion{background:rgba(255,140,66,0.08);border:1px solid rgba(255,140,66,0.25);color:rgba(255,140,66,0.9);}
 .modal-prod-note.note-listo{background:rgba(41,241,255,0.07);border:1px solid rgba(41,241,255,0.2);color:rgba(41,241,255,0.85);}
-
 .empty-slot{border:1px dashed var(--faint);border-radius:8px;padding:0.9rem;text-align:center;font-family:var(--mono);font-size:0.7rem;color:var(--faint);}
-::-webkit-scrollbar{width:6px;height:6px;}
-::-webkit-scrollbar-track{background:transparent;}
-::-webkit-scrollbar-thumb{background:var(--border);border-radius:3px;}
+::-webkit-scrollbar{width:6px;height:6px;}::-webkit-scrollbar-track{background:transparent;}::-webkit-scrollbar-thumb{background:var(--border);border-radius:3px;}
 </style>
 </head>
 <body>
-
 <div class="topbar">
   <div class="logo">QUANTUMSEC <span>// CONTENT OS</span></div>
   <div class="week-nav">
@@ -148,7 +118,6 @@ body{background:var(--bg);color:var(--text);font-family:var(--sans);min-height:1
     <button class="btn-nav" onclick="changeWeek(1)">→</button>
   </div>
 </div>
-
 <div class="statsbar">
   <div class="stat"><span class="stat-num" id="statTotal">0</span><span class="stat-label">Piezas totales</span></div>
   <div class="stat"><span class="stat-num green" id="statApproved">0</span><span class="stat-label">Aprobadas</span></div>
@@ -156,7 +125,6 @@ body{background:var(--bg);color:var(--text);font-family:var(--sans);min-height:1
   <div class="stat"><span class="stat-num orange" id="statProd">0</span><span class="stat-label">En producción</span></div>
   <div class="stat"><span class="stat-num pink" id="statRejected">0</span><span class="stat-label">Rechazadas</span></div>
 </div>
-
 <div class="filters">
   <span class="filter-label">TIPO:</span>
   <button class="chip active" data-filter="all" onclick="setFilter('all',this)">Todo</button>
@@ -169,112 +137,95 @@ body{background:var(--bg);color:var(--text);font-family:var(--sans);min-height:1
   <button class="chip" data-filter="en-produccion" onclick="setFilter('en-produccion',this)">🎬 En producción</button>
   <button class="chip" data-filter="pendiente" onclick="setFilter('pendiente',this)">⏳ Listos para revisar</button>
 </div>
-
 <div class="grid-wrap">
   <div class="calendar-grid" id="calendarGrid"></div>
 </div>
-
 <div class="modal-overlay" id="modalOverlay" onclick="closeModal(event)">
   <div class="modal" id="modal">
     <div class="modal-header">
       <span class="modal-title" id="modalTitle"></span>
       <button class="modal-close" onclick="closeModalDirect()">✕</button>
     </div>
-    <div class="modal-section">
-      <span class="modal-section-label">Tipo</span>
-      <span class="modal-section-content" id="modalType"></span>
-    </div>
-    <div class="modal-section">
-      <span class="modal-section-label">Plataforma(s)</span>
-      <span class="modal-section-content" id="modalPlatforms"></span>
-    </div>
+    <div class="modal-section"><span class="modal-section-label">Tipo</span><span class="modal-section-content" id="modalType"></span></div>
+    <div class="modal-section"><span class="modal-section-label">Plataforma(s)</span><span class="modal-section-content" id="modalPlatforms"></span></div>
     <div class="modal-section">
       <span class="modal-section-label">Estado de producción</span>
       <div class="modal-pipeline" id="modalPipeline"></div>
       <div class="modal-prod-note" id="modalProdNote"></div>
     </div>
-    <div class="modal-section">
-      <span class="modal-section-label">Descripción</span>
-      <span class="modal-section-content" id="modalDesc"></span>
-    </div>
-    <div class="modal-section">
-      <span class="modal-section-label">Notas de producción</span>
-      <span class="modal-section-content" id="modalNotes"></span>
-    </div>
+    <div class="modal-section"><span class="modal-section-label">Descripción</span><span class="modal-section-content" id="modalDesc"></span></div>
+    <div class="modal-section"><span class="modal-section-label">Notas de producción</span><span class="modal-section-content" id="modalNotes"></span></div>
     <div class="modal-actions" id="modalActions"></div>
   </div>
 </div>
-
 <script>
-const PROD_STEPS = [
-  { key:'sinempezar',   label:'Sin empezar',         cls:'active-sinempezar'   },
-  { key:'enproduccion', label:'🎬 En producción',     cls:'active-enproduccion' },
-  { key:'listo',        label:'✓ Listo para revisar', cls:'active-listo'        },
+const PROD_STEPS=[
+  {key:'sinempezar',label:'Sin empezar',cls:'active-sinempezar'},
+  {key:'enproduccion',label:'🎬 En producción',cls:'active-enproduccion'},
+  {key:'listo',label:'✓ Listo para revisar',cls:'active-listo'},
+];
+const CONTENT=[
+  // ── SEMANA ACTUAL (23-29 jun) — solo finde
+  {id:13,week:0,dayOffset:5,type:'kike',platforms:['LinkedIn','Reels'],title:'Kike: El factor diferencial de QuantumSec',desc:'.',notes:'Vídeo ya editado. Overlay con bullets animados. Pieza clave de marca.',status:'pending',prod:'enproduccion',prodNote:'Editado la velocidad de las animaciones.'},
+  {id:3,week:0,dayOffset:6,type:'kike',platforms:['LinkedIn','Reels'],title:'Kike: Defacement — cuando hackean tu web',desc:'.',notes:'Vídeo ya editado. Comprobar overlay de ejemplos visuales.',status:'pending',prod:'enproduccion',prodNote:'Editado la velocidad de las animaciones.'},
+
+  // ── SEMANA 30 JUN – 6 JUL
+  {id:5,week:1,dayOffset:0,type:'kike',platforms:['LinkedIn','Reels'],title:'Kike: Seguridad para Startups',desc:'.',notes:'Vídeo ya editado. Overlay con 5 puntos clave para startups.',status:'pending',prod:'enproduccion',prodNote:'Editado la velocidad de las animaciones.'},
+  {id:6,week:1,dayOffset:0,type:'animado',platforms:['Reels','LinkedIn'],title:'Vídeo animado: Fraude CEO con deepfake — tu jefe en pantalla no es tu jefe',desc:'El 23% de empresas españolas ya ha sufrido intentos. Con 15s de audio y 5$/mes cualquiera puede clonar una voz. Red Black Axe desmantelada en España: 5,9M€ estafados.',notes:'Datos: 23% empresas afectadas, 600.000€/golpe, 15s audio para clonar voz. Fuente: INCIBE, CaixaBank, DigitalPerito. Estilo ZERO DAY.',status:'pending',prod:'sinempezar',prodNote:'Pendiente de empezar. Tema: fraude CEO con IA deepvoice/deepfake.'},
+  {id:7,week:1,dayOffset:1,type:'kike',platforms:['LinkedIn','Reels'],title:'Kike: WordPress y sus riesgos de seguridad',desc:'.',notes:'Vídeo ya editado. Overlay con datos de vulnerabilidades WordPress 2026.',status:'pending',prod:'enproduccion',prodNote:'Editado la velocidad de las animaciones.'},
+  {id:8,week:1,dayOffset:1,type:'carrusel',platforms:['Reels','LinkedIn'],title:'Carrusel: Smishing AEAT — las 4 señales del phishing sofisticado',desc:'Oleada activa de smishing suplantando a la AEAT. Dominios .es registrados hace menos de 48h, sin faltas de ortografía, diseño idéntico al portal oficial.',notes:'4 señales INCIBE (24 jun): verificar dominio, desconfiar urgencia, nadie pide contraseña, no confirmar identidad por email. Línea 017.',status:'pending',prod:'sinempezar',prodNote:'Pendiente de empezar. Tema: smishing AEAT con dominios .es <48h.'},
+  {id:9,week:1,dayOffset:2,type:'kike',platforms:['LinkedIn','Reels'],title:'Kike: Horquilla de precios en auditorías',desc:'.',notes:'Vídeo ya editado. Overlay con rangos de precios animados.',status:'pending',prod:'enproduccion',prodNote:'Editado la velocidad de las animaciones.'},
+  {id:10,week:1,dayOffset:2,type:'linkedin',platforms:['LinkedIn'],title:'Post: Multa récord AEPD a Amadeus — 18M€ por reutilizar datos para IA',desc:'La AEPD sanciona a Amadeus con 18M€ por usar datos PNR de millones de viajeros para un piloto de perfilado sin base jurídica. La mayor multa de la historia de la AEPD.',notes:'Datos: 18M€ multa, 14,4M€ pagados, datos PNR desde 2019, piloto de perfilado 2022, 6 autoridades europeas cooperaron.',status:'pending',prod:'sinempezar',prodNote:'Pendiente de redactar. Tema: multa récord AEPD a Amadeus (18M€).'},
+  {id:11,week:1,dayOffset:3,type:'kike',platforms:['LinkedIn','Reels'],title:'Kike: ¿Cuánto dura una auditoría?',desc:'.',notes:'Vídeo ya editado. Overlay con timeline visual de fases.',status:'pending',prod:'enproduccion',prodNote:'Editado la velocidad de las animaciones.'},
+  {id:12,week:1,dayOffset:3,type:'animado',platforms:['Reels','LinkedIn'],title:'Vídeo animado: NIS2 cuenta atrás — octubre 2026 se acerca',desc:'La ley NIS2 sigue sin publicarse en el BOE. Octubre 2026 es el límite. La UE ya presiona con sanciones al Estado. ¿Tu empresa cumple?',notes:'Datos: mercado >5.000M€, umbral ≥50 empleados o >10M€ facturación, multas hasta 10M€ o 2% facturación global.',status:'pending',prod:'sinempezar',prodNote:'Pendiente de empezar. Tema: cuenta atrás NIS2.'},
+  {id:14,week:1,dayOffset:4,type:'animado',platforms:['Reels','LinkedIn'],title:'Vídeo animado: Brecha Lemmon — 24.000 SIMs a la venta y el 2FA por SMS en entredicho',desc:'Operador Lemmon (red Orange) hackeado: 24.000 clientes con ICCID y PUK a la venta en la dark web. Riesgo directo de SIM swapping y bypass del 2FA bancario.',notes:'Datos: 24.000 registros, ICCID+PUK expuestos. Riesgo: SIM swapping → bypass 2FA SMS. Mensaje: migrar a TOTP o passkeys.',status:'pending',prod:'sinempezar',prodNote:'Pendiente de empezar. Tema: brecha Lemmon — ICCID/PUK a la venta, SIM swapping.'},
+  {id:2,week:1,dayOffset:5,type:'carrusel',platforms:['Reels','LinkedIn'],title:'Carrusel: Decathlon hackeada — el riesgo del proveedor SaaS',desc:'Ciberataque a Decathlon España (mayo 2026): correos de empleados expuestos por un proveedor SaaS. Actor de amenaza: grupo 888.',notes:'Datos: correos corporativos de empleados en España, actor 888, vector: app de terceros SaaS. Mensaje: inventaría tus SaaS.',status:'pending',prod:'sinempezar',prodNote:'Pendiente de empezar. Tema: ciberataque Decathlon España via proveedor SaaS.'},
+  {id:4,week:1,dayOffset:5,type:'linkedin',platforms:['LinkedIn'],title:'Post: Moodle RCE — 18 vulnerabilidades y una crítica en el LMS de todas las universidades',desc:'INCIBE-CERT alerta (23 jun): 18 vulnerabilidades en Moodle, una crítica con ejecución remota de código.',notes:'Datos: 18 vulns, 1 crítica RCE, versiones parcheadas: 5.2.1/5.1.5/5.0.8/4.5.12.',status:'pending',prod:'sinempezar',prodNote:'Pendiente de redactar. Tema: 18 vulnerabilidades Moodle (1 RCE crítico).'},
+
+  // ── SEMANA 7-13 JUL
+  {id:20,week:2,dayOffset:0,type:'animado',platforms:['Reels','LinkedIn'],title:'Vídeo animado: DDoS a la Comisión Europea — cuando atacan las instituciones de la UE',desc:'Ciberataque DDoS masivo contra la Comisión Europea en julio 2026. Servicios inaccesibles, mercados desestabilizados y datos diplomáticos en riesgo. Qué es un DDoS y qué implica para la seguridad institucional europea.',notes:'Fuente: Ciberpyme, julio 2026. Conectar con NIS2 y la urgencia regulatoria. Mensaje: si atacan a la UE, nadie está a salvo.',status:'pending',prod:'sinempezar',prodNote:'Pendiente de empezar. Tema: DDoS Comisión Europea julio 2026.'},
+  {id:21,week:2,dayOffset:1,type:'carrusel',platforms:['Reels','LinkedIn'],title:'Carrusel: Endesa — 20 millones de clientes: IBAN y DNI expuestos',desc:'La mayor brecha energética en España. El hacker "Spain" extrajo contacto, DNI, IBAN y detalles de contratos de entre 3 y 20 millones de clientes. Qué pasó, qué datos están expuestos y qué deben hacer los afectados.',notes:'Fuente: Channel Partner, DigitalPerito, enero 2026. Datos: DNI, IBAN, teléfono, dirección, patrones de consumo. Origen: proveedor tecnológico externo. Riesgo: phishing personalizado, domiciliaciones fraudulentas.',status:'pending',prod:'sinempezar',prodNote:'Pendiente de empezar. Tema: brecha Endesa 20M clientes, IBAN y DNI.'},
+  {id:22,week:2,dayOffset:2,type:'linkedin',platforms:['LinkedIn'],title:'Post: HaciendaSec — 47 millones de ciudadanos en la dark web',desc:'El actor HaciendaSec afirmó tener datos fiscales y bancarios de 47 millones de españoles. El Ministerio de Hacienda investiga. Qué sabemos, qué no sabemos y qué deberían hacer las empresas.',notes:'Fuente: Hackmanac, Channel Partner. Actor: HaciendaSec. Datos reclamados: personales, bancarios y fiscales de 47M ciudadanos. CTA: ¿tienes datos fiscales de clientes? Revisa tu postura ante brechas de terceros.',status:'pending',prod:'sinempezar',prodNote:'Pendiente de redactar. Tema: HaciendaSec y 47M de datos fiscales.'},
+  {id:23,week:2,dayOffset:3,type:'animado',platforms:['Reels','LinkedIn'],title:'Vídeo animado: Brecha Canvas — las plataformas educativas como infraestructura crítica',desc:'Instructure Canvas, el LMS más usado en universidades, comprometido en 2026. Conexión directa con el caso Moodle RCE de la semana anterior. Las plataformas de aprendizaje almacenan datos masivos y están profundamente integradas en operaciones diarias.',notes:'Fuente: Integrity360, junio 2026. Lección: los LMS deben tratarse como infraestructura crítica. Conectar con Moodle RCE de la semana anterior para reforzar el mensaje.',status:'pending',prod:'sinempezar',prodNote:'Pendiente de empezar. Tema: brecha Canvas + conexión Moodle — LMS como vector de ataque.'},
+  {id:24,week:2,dayOffset:4,type:'linkedin',platforms:['LinkedIn'],title:'Post: DDoS institucional — qué significa para tu empresa que ataquen a la UE',desc:'Si la Comisión Europea cae ante un DDoS, qué pueden aprender las empresas españolas. Resiliencia digital, planes de continuidad y la lección que NIS2 ya anticipaba.',notes:'Ángulo diferente al vídeo del lunes: este es más reflexivo, dirigido a directivos. CTA: ¿tiene tu empresa un plan de continuidad ante un DDoS? En QuantumSec lo evaluamos.',status:'pending',prod:'sinempezar',prodNote:'Pendiente de redactar. Tema: reflexión empresarial sobre el DDoS a la UE.'},
+  {id:25,week:2,dayOffset:5,type:'carrusel',platforms:['Reels','LinkedIn'],title:'Carrusel: Endesa — qué hacer si tu IBAN está expuesto',desc:'Guía práctica para ciudadanos y empresas afectadas por la brecha de Endesa. Monitorización bancaria, alertas, riesgo de phishing post-brecha y cuándo (y cómo) cambiar el IBAN.',notes:'Segunda pieza sobre Endesa — más orientada a acción. Martes fue el "qué pasó", sábado es el "qué hago yo ahora". Audiencia: afectados directos y empresas con empleados afectados.',status:'pending',prod:'sinempezar',prodNote:'Pendiente de empezar. Tema: guía práctica post-brecha Endesa — IBAN, phishing, alertas.'},
 ];
 
-const CONTENT = [
-  // ── SEMANA ACTUAL (23-29 jun) — solo finde ───────────────────────────────
-  { id:13, week:0, dayOffset:5, type:'kike',     platforms:['LinkedIn','Reels'], title:'Kike: El factor diferencial de QuantumSec',              desc:'.', notes:'Vídeo ya editado. Overlay con bullets animados. Pieza clave de marca.',         status:'pending', prod:'enproduccion', prodNote:'Editado la velocidad de las animaciones.' },
-  { id:3,  week:0, dayOffset:6, type:'kike',     platforms:['LinkedIn','Reels'], title:'Kike: Defacement — cuando hackean tu web',                desc:'.', notes:'Vídeo ya editado. Comprobar overlay de ejemplos visuales.',                      status:'pending', prod:'enproduccion', prodNote:'Editado la velocidad de las animaciones.' },
+const TYPE_LABEL={linkedin:'Post LinkedIn',carrusel:'Carrusel Instagram',animado:'Vídeo animado',kike:'Vídeo',short:'Short vertical'};
+const TYPE_CLASS={linkedin:'badge-linkedin',carrusel:'badge-carrusel',animado:'badge-animado',kike:'badge-kike',short:'badge-short'};
+const DAYS=['Lunes','Martes','Miércoles','Jueves','Viernes','Sábado','Domingo'];
 
-  // ── SEMANA DEL 30 JUN AL 6 JUL ───────────────────────────────────────────
-  // Lunes — Fraude CEO deepfake
-  { id:5,  week:1, dayOffset:0, type:'kike',     platforms:['LinkedIn','Reels'], title:'Kike: Seguridad para Startups',                          desc:'.', notes:'Vídeo ya editado. Overlay con 5 puntos clave para startups.',                    status:'pending', prod:'enproduccion', prodNote:'Editado la velocidad de las animaciones.' },
-  { id:6,  week:1, dayOffset:0, type:'animado',  platforms:['Reels','LinkedIn'], title:'Vídeo animado: Fraude CEO con deepfake — tu jefe en pantalla no es tu jefe', desc:'El 23% de empresas españolas ya ha sufrido intentos. Con 15s de audio y 5$/mes cualquiera puede clonar una voz. Red Black Axe desmantelada en España: 5,9M€ estafados.', notes:'Datos: 23% empresas afectadas, 600.000€/golpe, 15s audio para clonar voz. Fuente: INCIBE, CaixaBank, DigitalPerito. Estilo ZERO DAY. Sin voz, subtítulos grandes.', status:'pending', prod:'sinempezar', prodNote:'Pendiente de empezar. Tema: fraude CEO con IA deepvoice/deepfake. Operación Black Axe (Europol + Policía Nacional, 5,9M€).' },
+let weekOffset=1,activeFilter='all',openCardId=null;
+const states={},prods={},prodNotes={};
+CONTENT.forEach(c=>{states[c.id]=c.status;prods[c.id]=c.prod;prodNotes[c.id]=c.prodNote;});
 
-  // Martes — Smishing AEAT
-  { id:7,  week:1, dayOffset:1, type:'kike',     platforms:['LinkedIn','Reels'], title:'Kike: WordPress y sus riesgos de seguridad',              desc:'.', notes:'Vídeo ya editado. Overlay con datos de vulnerabilidades WordPress 2026.',        status:'pending', prod:'enproduccion', prodNote:'Editado la velocidad de las animaciones.' },
-  { id:8,  week:1, dayOffset:1, type:'carrusel', platforms:['Reels','LinkedIn'], title:'Carrusel: Smishing AEAT — las 4 señales del phishing sofisticado', desc:'Oleada activa de smishing suplantando a la AEAT. Dominios .es registrados hace menos de 48h, sin faltas de ortografía, diseño idéntico al portal oficial.', notes:'4 señales INCIBE (24 jun): verificar dominio, desconfiar urgencia, nadie pide contraseña, no confirmar identidad por email. 25.133 phishing gestionados en 2025. Línea 017.', status:'pending', prod:'sinempezar', prodNote:'Pendiente de empezar. Tema: smishing AEAT con dominios .es <48h. Aviso INCIBE 24 jun 2026.' },
-
-  // Miércoles — Multa Amadeus
-  { id:9,  week:1, dayOffset:2, type:'kike',     platforms:['LinkedIn','Reels'], title:'Kike: Horquilla de precios en auditorías',                desc:'.', notes:'Vídeo ya editado. Overlay con rangos de precios animados.',                    status:'pending', prod:'enproduccion', prodNote:'Editado la velocidad de las animaciones.' },
-  { id:10, week:1, dayOffset:2, type:'linkedin', platforms:['LinkedIn'],         title:'Post: Multa récord AEPD a Amadeus — 18M€ por reutilizar datos para IA', desc:'La AEPD sanciona a Amadeus con 18M€ (pagados 14,4M€) por usar datos PNR de millones de viajeros para un piloto de perfilado sin base jurídica. La mayor multa de la historia de la AEPD.', notes:'Datos clave: 18M€ multa, 14,4M€ pagados, datos PNR desde 2019, piloto de perfilado 2022, 6 autoridades europeas cooperaron. CTA: ¿reutilizas datos de clientes para IA? Revisa tu base jurídica.', status:'pending', prod:'sinempezar', prodNote:'Pendiente de redactar. Tema: multa récord AEPD a Amadeus (18M€) por perfilado ilícito con datos PNR. Mayo 2026.' },
-
-  // Jueves — NIS2
-  { id:11, week:1, dayOffset:3, type:'kike',     platforms:['LinkedIn','Reels'], title:'Kike: ¿Cuánto dura una auditoría?',                      desc:'.', notes:'Vídeo ya editado. Overlay con timeline visual de fases.',                      status:'pending', prod:'enproduccion', prodNote:'Editado la velocidad de las animaciones.' },
-  { id:12, week:1, dayOffset:3, type:'animado',  platforms:['Reels','LinkedIn'], title:'Vídeo animado: NIS2 cuenta atrás — octubre 2026 se acerca', desc:'La ley NIS2 sigue sin publicarse en el BOE. Octubre 2026 es el límite. La UE ya presiona con sanciones al Estado. ¿Tu empresa cumple?', notes:'Datos: mercado ciberseguridad España >5.000M€, 44,2% empresas suben presupuesto, umbral ≥50 empleados o >10M€ facturación, multas hasta 10M€ o 2% facturación global. Fuente: IT User, Secra, DigitalPerito.', status:'pending', prod:'sinempezar', prodNote:'Pendiente de empezar. Tema: cuenta atrás NIS2 — sin BOE y con octubre 2026 como límite. Mercado >5.000M€.' },
-
-  // Viernes — Brecha Lemmon / SIM swapping
-  { id:14, week:1, dayOffset:4, type:'animado',  platforms:['Reels','LinkedIn'], title:'Vídeo animado: Brecha Lemmon — 24.000 SIMs a la venta y el 2FA por SMS en entredicho', desc:'Operador Lemmon (red Orange) hackeado: 24.000 clientes con ICCID y PUK a la venta en la dark web. Riesgo directo de SIM swapping y bypass del 2FA bancario.', notes:'Datos: 24.000 registros, ICCID+PUK expuestos, venta en dark web vía Session. Riesgo: SIM swapping → bypass 2FA SMS. Mensaje: migrar a TOTP o passkeys. Fuente: Escudo Digital, Roams, Bandaancha (18-24 jun 2026).', status:'pending', prod:'sinempezar', prodNote:'Pendiente de empezar. Tema: brecha Lemmon — ICCID/PUK a la venta, SIM swapping, 2FA por SMS en entredicho.' },
-
-  // Sábado — Decathlon + Moodle
-  { id:2,  week:1, dayOffset:5, type:'carrusel', platforms:['Reels','LinkedIn'], title:'Carrusel: Decathlon hackeada — el riesgo del proveedor SaaS', desc:'Ciberataque a Decathlon España (mayo 2026): correos de empleados expuestos por un proveedor SaaS. Actor de amenaza: grupo 888. El fallo no fue de Decathlon sino de un tercero con acceso.', notes:'Datos: correos corporativos de empleados en España, actor 888, vector: app de terceros SaaS. Mensaje: inventaría tus SaaS, exige cláusulas NIS2 a proveedores. Fuente: Modaes, El Economista, Bolsamania (27 may 2026).', status:'pending', prod:'sinempezar', prodNote:'Pendiente de empezar. Tema: ciberataque Decathlon España via proveedor SaaS. Actor 888. Mayo 2026.' },
-  { id:4,  week:1, dayOffset:5, type:'linkedin', platforms:['LinkedIn'],         title:'Post: Moodle RCE — 18 vulnerabilidades y una crítica en el LMS de todas las universidades', desc:'INCIBE-CERT alerta (23 jun): 18 vulnerabilidades en Moodle, una crítica con ejecución remota de código. Afecta a casi todas las universidades y centros de formación corporativa de España.', notes:'Datos: 18 vulns, 1 crítica RCE (control total del sistema), versiones parcheadas: 5.2.1/5.1.5/5.0.8/4.5.12. También: ArubaSign CVSS 8.8 sin parche. Fuente: INCIBE-CERT, Moncloa (23 jun 2026). CTA: ¿tienes Moodle? Actualiza ya.', status:'pending', prod:'sinempezar', prodNote:'Pendiente de redactar. Tema: 18 vulnerabilidades Moodle (1 RCE crítico). Alerta INCIBE-CERT 23 jun 2026.' },
+// Semana 0 = 23 jun, Semana 1 = 30 jun, Semana 2 = 7 jul
+const WEEK_STARTS=[
+  new Date(2026,5,23), // semana 0: 23-29 jun
+  new Date(2026,5,30), // semana 1: 30 jun - 6 jul
+  new Date(2026,6,7),  // semana 2: 7-13 jul
 ];
-const TYPE_LABEL = { linkedin:'Post LinkedIn', carrusel:'Carrusel Instagram', animado:'Vídeo animado', kike:'Vídeo', short:'Short vertical' };
-const TYPE_CLASS  = { linkedin:'badge-linkedin', carrusel:'badge-carrusel', animado:'badge-animado', kike:'badge-kike', short:'badge-short' };
-const DAYS = ['Lunes','Martes','Miércoles','Jueves','Viernes','Sábado','Domingo'];
-
-let weekOffset=0, activeFilter='all', openCardId=null;
-const states={}, prods={}, prodNotes={};
-CONTENT.forEach(c=>{ states[c.id]=c.status; prods[c.id]=c.prod; prodNotes[c.id]=c.prodNote; });
-
-function getMonday(offset=0){const now=new Date(),day=now.getDay(),diff=(day===0?-6:1-day),m=new Date(now);m.setDate(now.getDate()+diff+offset*7);m.setHours(0,0,0,0);return m;}
+function getMonday(offset=0){
+  const idx=Math.max(0,Math.min(WEEK_STARTS.length-1,offset));
+  return new Date(WEEK_STARTS[idx]);
+}
 function formatDate(d){return d.toLocaleDateString('es-ES',{day:'2-digit',month:'short'});}
-function changeWeek(dir){weekOffset+=dir;render();}
-function getWeekCards(weekIdx){return CONTENT.filter(c=>c.week===weekIdx);}
-
+function changeWeek(dir){
+  weekOffset=Math.max(0,Math.min(WEEK_STARTS.length-1,weekOffset+dir));
+  render();
+}
 function setFilter(f,el){activeFilter=f;document.querySelectorAll('.chip').forEach(c=>c.classList.remove('active'));el.classList.add('active');render();}
-
 function matchesFilter(card){
-  if(activeFilter==='all') return true;
-  if(activeFilter==='sin-empezar') return prods[card.id]==='sinempezar';
-  if(activeFilter==='en-produccion') return prods[card.id]==='enproduccion';
-  if(activeFilter==='pendiente') return prods[card.id]==='listo'&&states[card.id]==='pending';
+  if(activeFilter==='all')return true;
+  if(activeFilter==='sin-empezar')return prods[card.id]==='sinempezar';
+  if(activeFilter==='en-produccion')return prods[card.id]==='enproduccion';
+  if(activeFilter==='pendiente')return prods[card.id]==='listo'&&states[card.id]==='pending';
   return card.type===activeFilter;
 }
-
-function setProd(id,prodKey,e){
-  e&&e.stopPropagation();
-  prods[id]=prodKey;
-  if(prodKey!=='listo') states[id]='pending';
-  render();
-  if(openCardId===id) openModal(id);
-}
+function setProd(id,prodKey,e){e&&e.stopPropagation();prods[id]=prodKey;if(prodKey!=='listo')states[id]='pending';render();if(openCardId===id)openModal(id);}
 function approve(id,e){e&&e.stopPropagation();states[id]='approved';render();if(openCardId===id)openModal(id);}
 function reject(id,e){e&&e.stopPropagation();states[id]='rejected';render();if(openCardId===id)openModal(id);}
 function undo(id,e){e&&e.stopPropagation();states[id]='pending';render();if(openCardId===id)openModal(id);}
-
 function openModal(id){
   const card=CONTENT.find(c=>c.id===id);if(!card)return;
   openCardId=id;
@@ -284,18 +235,10 @@ function openModal(id){
   document.getElementById('modalPlatforms').textContent=card.platforms.join(' · ');
   document.getElementById('modalDesc').textContent=card.desc;
   document.getElementById('modalNotes').textContent=card.notes;
-
-  // Pipeline buttons
-  document.getElementById('modalPipeline').innerHTML=PROD_STEPS.map(step=>`
-    <button class="modal-prod-btn ${prod===step.key?step.cls:''}" onclick="setProd(${id},'${step.key}',event)">${step.label}</button>
-  `).join('');
-
-  // Nota de estado
+  document.getElementById('modalPipeline').innerHTML=PROD_STEPS.map(step=>`<button class="modal-prod-btn ${prod===step.key?step.cls:''}" onclick="setProd(${id},'${step.key}',event)">${step.label}</button>`).join('');
   const noteEl=document.getElementById('modalProdNote');
   noteEl.className=`modal-prod-note note-${prod}`;
   noteEl.textContent=prodNotes[id]||'';
-
-  // Acciones revisión
   const ma=document.getElementById('modalActions');
   if(prod!=='listo'){
     ma.innerHTML=`<div style="font-family:var(--mono);font-size:0.75rem;color:var(--muted);padding:0.4rem 0;">Marca como "Listo para revisar" para poder aprobar o rechazar.</div>`;
@@ -311,7 +254,6 @@ function openModal(id){
 function closeModal(e){if(e.target===document.getElementById('modalOverlay'))closeModalDirect();}
 function closeModalDirect(){document.getElementById('modalOverlay').classList.remove('open');openCardId=null;}
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModalDirect();});
-
 function render(){
   const monday=getMonday(weekOffset),sunday=new Date(monday);
   sunday.setDate(monday.getDate()+6);
@@ -322,11 +264,9 @@ function render(){
   document.getElementById('statPending').textContent=weekCards.filter(c=>prods[c.id]==='listo'&&states[c.id]==='pending').length;
   document.getElementById('statProd').textContent=weekCards.filter(c=>prods[c.id]==='enproduccion').length;
   document.getElementById('statRejected').textContent=weekCards.filter(c=>states[c.id]==='rejected').length;
-
   const grid=document.getElementById('calendarGrid');
   grid.innerHTML='';
   const today=new Date();today.setHours(0,0,0,0);
-
   for(let d=0;d<7;d++){
     const date=new Date(monday);date.setDate(monday.getDate()+d);
     const isToday=date.getTime()===today.getTime(),isWeekend=d>=5;
@@ -335,7 +275,6 @@ function render(){
     hdr.className='day-header'+(isToday?' today':'')+(isWeekend?' weekend':'');
     hdr.innerHTML=`<span class="day-name">${DAYS[d]}</span><span class="day-date">${formatDate(date)}</span>`;
     col.appendChild(hdr);
-
     const dayCards=CONTENT.filter(c=>c.week===weekOffset&&c.dayOffset===d&&matchesFilter(c));
     if(dayCards.length===0){
       const empty=document.createElement('div');empty.className='empty-slot';
@@ -347,12 +286,8 @@ function render(){
         const el=document.createElement('div');
         el.className=`card ${st}`;
         el.onclick=()=>openModal(card.id);
-
         const pipelineHTML=`<div class="prod-pipeline" onclick="event.stopPropagation()">${PROD_STEPS.map(step=>`<div class="prod-step ${prod===step.key?step.cls:''}" onclick="setProd(${card.id},'${step.key}',event)" title="${step.label}">${step.label}</div>`).join('')}</div>`;
-
-        // Nota breve en tarjeta
         const noteHTML=`<div class="prod-note note-${prod}" onclick="event.stopPropagation()">${prodNotes[card.id]||''}</div>`;
-
         let actionsHTML='';
         if(prod==='listo'){
           if(st==='pending'){
@@ -363,16 +298,11 @@ function render(){
             actionsHTML=`<div class="card-actions"><div class="status-label ${cls}" style="flex:1">${lbl}</div><button class="btn-undo" onclick="undo(${card.id},event)">↩</button></div>`;
           }
         }
-
         const platformsHTML=card.platforms.map(p=>`<span class="platform">${p}</span>`).join('');
         el.innerHTML=`
-          <div class="card-top">
-            <span class="type-badge ${TYPE_CLASS[card.type]}">${TYPE_LABEL[card.type]}</span>
-            <span class="status-dot dot-${st}"></span>
-          </div>
+          <div class="card-top"><span class="type-badge ${TYPE_CLASS[card.type]}">${TYPE_LABEL[card.type]}</span><span class="status-dot dot-${st}"></span></div>
           <div class="card-title">${card.title}</div>
-          ${pipelineHTML}
-          ${noteHTML}
+          ${pipelineHTML}${noteHTML}
           <div class="platforms">${platformsHTML}</div>
           ${actionsHTML}`;
         col.appendChild(el);
