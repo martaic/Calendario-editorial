@@ -263,23 +263,23 @@ function openModal(id){
   openCardId=id;
   const st=states[id],prod=prods[id];
   document.getElementById('modalTitle').textContent=card.title;
-  document.getElementById('modalType').innerHTML=`<span class="type-badge \${TYPE_CLASS[card.type]}">\${TYPE_LABEL[card.type]}</span>`;
+  document.getElementById('modalType').innerHTML=`<span class="type-badge ${TYPE_CLASS[card.type]}">${TYPE_LABEL[card.type]}</span>`;
   document.getElementById('modalPlatforms').textContent=card.platforms.join(' · ');
   document.getElementById('modalDesc').textContent=card.desc;
   document.getElementById('modalNotes').textContent=card.notes;
-  document.getElementById('modalPipeline').innerHTML=PROD_STEPS.map(step=>`<button class="modal-prod-btn \${prod===step.key?step.cls:''}" onclick="setProd(\${id},'\${step.key}',event)">\${step.label}</button>`).join('');
+  document.getElementById('modalPipeline').innerHTML=PROD_STEPS.map(step=>`<button class="modal-prod-btn ${prod===step.key?step.cls:''}" onclick="setProd(${id},'${step.key}',event)">${step.label}</button>`).join('');
   const noteEl=document.getElementById('modalProdNote');
-  noteEl.className=`modal-prod-note note-\${prod}`;
+  noteEl.className=`modal-prod-note note-${prod}`;
   noteEl.textContent=prodNotes[id]||'';
   const ma=document.getElementById('modalActions');
   if(prod!=='listo'){
     ma.innerHTML=`<div style="font-family:var(--mono);font-size:0.75rem;color:var(--muted);padding:0.4rem 0;">Marca como "Listo para revisar" para poder aprobar o rechazar.</div>`;
   } else if(st==='pending'){
-    ma.innerHTML=`<button class="btn-approve" onclick="approve(\${id})">✓ Aprobar</button><button class="btn-reject" onclick="reject(\${id})">✕ Rechazar</button>`;
+    ma.innerHTML=`<button class="btn-approve" onclick="approve(${id})">✓ Aprobar</button><button class="btn-reject" onclick="reject(${id})">✕ Rechazar</button>`;
   } else {
     const lbl=st==='approved'?'✓ Aprobada':'✕ Rechazada';
     const cls=st==='approved'?'label-approved':'label-rejected';
-    ma.innerHTML=`<div class="status-label \${cls}" style="flex:1">\${lbl}</div><button class="btn-undo" onclick="undo(\${id})">↩ Deshacer</button>`;
+    ma.innerHTML=`<div class="status-label ${cls}" style="flex:1">${lbl}</div><button class="btn-undo" onclick="undo(${id})">↩ Deshacer</button>`;
   }
   document.getElementById('modalOverlay').classList.add('open');
 }
@@ -305,7 +305,7 @@ function render(){
     const col=document.createElement('div');col.className='day-col';
     const hdr=document.createElement('div');
     hdr.className='day-header'+(isToday?' today':'')+(isWeekend?' weekend':'');
-    hdr.innerHTML=`<span class="day-name">\${DAYS[d]}</span><span class="day-date">\${formatDate(date)}</span>`;
+    hdr.innerHTML=`<span class="day-name">${DAYS[d]}</span><span class="day-date">${formatDate(date)}</span>`;
     col.appendChild(hdr);
     const dayCards=CONTENT.filter(c=>c.week===weekOffset&&c.dayOffset===d&&matchesFilter(c));
     if(dayCards.length===0){
@@ -316,27 +316,27 @@ function render(){
       dayCards.forEach(card=>{
         const st=states[card.id],prod=prods[card.id];
         const el=document.createElement('div');
-        el.className=`card \${st}`;
+        el.className=`card ${st}`;
         el.onclick=()=>openModal(card.id);
-        const pipelineHTML=`<div class="prod-pipeline" onclick="event.stopPropagation()">\${PROD_STEPS.map(step=>`<div class="prod-step \${prod===step.key?step.cls:''}" onclick="setProd(\${card.id},'\${step.key}',event)" title="\${step.label}">\${step.label}</div>`).join('')}</div>`;
-        const noteHTML=`<div class="prod-note note-\${prod}" onclick="event.stopPropagation()">\${prodNotes[card.id]||''}</div>`;
+        const pipelineHTML=`<div class="prod-pipeline" onclick="event.stopPropagation()">${PROD_STEPS.map(step=>`<div class="prod-step ${prod===step.key?step.cls:''}" onclick="setProd(${card.id},'${step.key}',event)" title="${step.label}">${step.label}</div>`).join('')}</div>`;
+        const noteHTML=`<div class="prod-note note-${prod}" onclick="event.stopPropagation()">${prodNotes[card.id]||''}</div>`;
         let actionsHTML='';
         if(prod==='listo'){
           if(st==='pending'){
-            actionsHTML=`<div class="card-actions"><button class="btn-approve" onclick="approve(\${card.id},event)">✓ Aprobar</button><button class="btn-reject" onclick="reject(\${card.id},event)">✕ Rechazar</button></div>`;
+            actionsHTML=`<div class="card-actions"><button class="btn-approve" onclick="approve(${card.id},event)">✓ Aprobar</button><button class="btn-reject" onclick="reject(${card.id},event)">✕ Rechazar</button></div>`;
           } else {
             const lbl=st==='approved'?'✓ Aprobada':'✕ Rechazada';
             const cls=st==='approved'?'label-approved':'label-rejected';
-            actionsHTML=`<div class="card-actions"><div class="status-label \${cls}" style="flex:1">\${lbl}</div><button class="btn-undo" onclick="undo(\${card.id},event)">↩</button></div>`;
+            actionsHTML=`<div class="card-actions"><div class="status-label ${cls}" style="flex:1">${lbl}</div><button class="btn-undo" onclick="undo(${card.id},event)">↩</button></div>`;
           }
         }
-        const platformsHTML=card.platforms.map(p=>`<span class="platform">\${p}</span>`).join('');
+        const platformsHTML=card.platforms.map(p=>`<span class="platform">${p}</span>`).join('');
         el.innerHTML=`
-          <div class="card-top"><span class="type-badge \${TYPE_CLASS[card.type]}">\${TYPE_LABEL[card.type]}</span><span class="status-dot dot-\${st}"></span></div>
-          <div class="card-title">\${card.title}</div>
-          \${pipelineHTML}\${noteHTML}
-          <div class="platforms">\${platformsHTML}</div>
-          \${actionsHTML}`;
+          <div class="card-top"><span class="type-badge ${TYPE_CLASS[card.type]}">${TYPE_LABEL[card.type]}</span><span class="status-dot dot-${st}"></span></div>
+          <div class="card-title">${card.title}</div>
+          ${pipelineHTML}${noteHTML}
+          <div class="platforms">${platformsHTML}</div>
+          ${actionsHTML}`;
         col.appendChild(el);
       });
     }
