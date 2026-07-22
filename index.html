@@ -171,7 +171,7 @@ const CONTENT=[
 
   // ── SEMANA 30 JUN – 6 JUL
   {id:5,week:1,dayOffset:0,type:'kike',platforms:['LinkedIn','Reels'],title:'Kike: Seguridad para Startups',desc:'.',notes:'Vídeo ya editado. Overlay con 5 puntos clave para startups.',status:'pending',prod:'enproduccion',prodNote:'Editado la velocidad de las animaciones.'},
-  {id:6,week:1,dayOffset:0,type:'animado',platforms:['Reels','LinkedIn'],title:'Vídeo animado: Fraude CEO con deepfake — tu jefe en pantalla no es tu jefe',desc:'El 23% de empresas españolas ya ha sufrido intentos. Con 15s de audio y 5$/mes cualquiera puede clonar una voz. Red Black Axe desmantelada en España: 5,9M€ estafados.',notes:'Datos: 23% empresas afectadas, 600.000€/golpe, 15s audio para clonar voz. Fuente: INCIBE, CaixaBank, DigitalPerito. Estilo ZERO DAY.',status:'pending',prod:'sinempezar',prodNote:'Pendiente de empezar. Tema: fraude CEO con IA deepvoice/deepfake.'},
+  {id:6,week:1,dayOffset:0,type:'animado',platforms:['Reels','LinkedIn'],title:'Vídeo animado: Fraude CEO con deepfake — tu jefe en pantalla no es tu jefe',desc:'El 23% de empresas españolas ya ha sufrido intentos. Con 15s de audio y 5\$/mes cualquiera puede clonar una voz. Red Black Axe desmantelada en España: 5,9M€ estafados.',notes:'Datos: 23% empresas afectadas, 600.000€/golpe, 15s audio para clonar voz. Fuente: INCIBE, CaixaBank, DigitalPerito. Estilo ZERO DAY.',status:'pending',prod:'sinempezar',prodNote:'Pendiente de empezar. Tema: fraude CEO con IA deepvoice/deepfake.'},
   {id:7,week:1,dayOffset:1,type:'kike',platforms:['LinkedIn','Reels'],title:'Kike: WordPress y sus riesgos de seguridad',desc:'.',notes:'Vídeo ya editado. Overlay con datos de vulnerabilidades WordPress 2026.',status:'pending',prod:'enproduccion',prodNote:'Editado la velocidad de las animaciones.'},
   {id:8,week:1,dayOffset:1,type:'carrusel',platforms:['Reels','LinkedIn'],title:'Carrusel: Smishing AEAT — las 4 señales del phishing sofisticado',desc:'Oleada activa de smishing suplantando a la AEAT. Dominios .es registrados hace menos de 48h, sin faltas de ortografía, diseño idéntico al portal oficial.',notes:'4 señales INCIBE (24 jun): verificar dominio, desconfiar urgencia, nadie pide contraseña, no confirmar identidad por email. Línea 017.',status:'pending',prod:'sinempezar',prodNote:'Pendiente de empezar. Tema: smishing AEAT con dominios .es <48h.'},
   {id:9,week:1,dayOffset:2,type:'kike',platforms:['LinkedIn','Reels'],title:'Kike: Horquilla de precios en auditorías',desc:'.',notes:'Vídeo ya editado. Overlay con rangos de precios animados.',status:'pending',prod:'enproduccion',prodNote:'Editado la velocidad de las animaciones.'},
@@ -203,22 +203,39 @@ const CONTENT=[
   {id:39,week:3,dayOffset:5,type:'animado',platforms:['Reels'],title:'Vídeo animado ligero: 122.223 incidentes, 60% pymes',desc:'Pieza de apoyo (15s) al carrusel del día: contador animado que sube hasta 122.223 y resalta "60% → PYMES". Texto: "No eres demasiado pequeño para ser un objetivo. Eres el objetivo perfecto."',notes:'Apoyo del carrusel checklist (sábado). Logo QuantumSec en cierre.',status:'pending',prod:'sinempezar',prodNote:'Pendiente de empezar. Pieza de apoyo corta, mismo día que el carrusel de pymes.'},
   {id:40,week:3,dayOffset:6,type:'linkedin',platforms:['LinkedIn'],title:'Post largo: NIS2, la ley que llega tarde',desc:'Mientras España bate récords de ciberamenazas, la directiva NIS2 sigue sin transponerse en España: anteproyecto aprobado en enero 2025, aún pendiente de debate parlamentario. Obligaciones para empresas de +50 empleados o +10M€, nuevo Centro Nacional de Ciberseguridad, sanciones de hasta 10M€ o 2% de la facturación mundial, responsabilidad directa de la dirección.',notes:'Formato thought leadership / opinión, cierre de la semana temática. Publicar domingo 18:00. CTA: empresas dentro del ámbito de NIS2 que aún no se han preparado.',status:'pending',prod:'sinempezar',prodNote:'Pendiente de redactar. Cierre de la semana temática (podio mundial → NIS2).'},
   {id:41,week:3,dayOffset:6,type:'carrusel',platforms:['Reels','LinkedIn'],title:'Carrusel recap (opcional): Lo que aprendimos esta semana',desc:'Recap de la semana: una slide por día (podio mundial, quishing, IA ofensiva, filtraciones, pymes objetivo, NIS2) + slide final con CTA a diagnóstico QuantumSec. Pieza reutilizable como contenido "pilar" y para stories.',notes:'Formato opcional. 6 slides (una por tema del día) + cierre CTA. Pensado para reutilización en stories.',status:'pending',prod:'sinempezar',prodNote:'Pendiente de empezar. Pieza opcional de recap semanal.'},
+
+  // ── SEMANA 28 JUL - 2 AGO
+  {id:42,week:4,dayOffset:1,type:'animado',platforms:['Reels','LinkedIn'],title:'Vídeo animado: El ransomware en España se ha duplicado en un año',desc:'De 176 casos en 2024 a 392 en 2025 (+443% Qilin interanual). Ahorramás, cadena de supermercados con +290 tiendas, última víctima confirmada de Qilin. Doble extorsión: roban datos antes de cifrar, menos de 5 días de permanencia media.',notes:'Fuente: ConnectaSec, Black Kite 2026 Ransomware Report. Vector de entrada más común: credencial robada contra VPN/RDP sin MFA. CTA: auditoría de exposición a credenciales robadas.',status:'pending',prod:'sinempezar',prodNote:'Pendiente de empezar. Tema: ransomware duplicado en España + Ahorramás/Qilin.'},
+  {id:43,week:4,dayOffset:1,type:'linkedin',platforms:['LinkedIn'],title:'Post: El ransomware en España se ha más que duplicado en un año',desc:'De 176 a 392 casos (2024→2025). Qilin, +443% interanual, reclama el ataque a Ahorramás. Doble extorsión y credenciales robadas como vector de entrada más repetido.',notes:'Publicar tras el vídeo. CTA: ¿tu empresa detectaría un acceso con credenciales robadas en menos de 5 días?',status:'pending',prod:'sinempezar',prodNote:'Pendiente de redactar.'},
+  {id:44,week:4,dayOffset:2,type:'carrusel',platforms:['Reels','LinkedIn'],title:'Carrusel: Lidl no falló. Su proveedor sí.',desc:'Lidl confirma filtración de datos de clientes de su tienda online vía un proveedor de TI. Expuestos: nombre, teléfono, email, fecha de nacimiento y nº de cliente. NO contraseñas ni datos bancarios. Afecta también a Alemania, Bélgica y Países Bajos.',notes:'6 slides: portada, origen (proveedor TI), qué se filtró, alcance multipaís, riesgo real (phishing dirigido con datos reales), cierre CTA auditoría de proveedores.',status:'pending',prod:'sinempezar',prodNote:'Pendiente de empezar. Tema: filtración Lidl vía proveedor de TI.'},
+  {id:45,week:4,dayOffset:2,type:'linkedin',platforms:['LinkedIn'],title:'Post: Lidl confirma una filtración que no empezó en Lidl',desc:'Acceso no autorizado a través de un proveedor de servicios de TI. Datos expuestos: nombre, teléfono, email, fecha de nacimiento, nº de cliente. El patrón de terceros se repite: Accenture, Endesa, ahora Lidl.',notes:'CTA: ¿sabes qué proveedores tienen acceso a los datos de tus clientes?',status:'pending',prod:'sinempezar',prodNote:'Pendiente de redactar.'},
+  {id:46,week:4,dayOffset:3,type:'animado',platforms:['Reels','LinkedIn'],title:'Vídeo animado: Si atacan a la Comisión Europea, nadie está a salvo',desc:'23 de julio de 2026: ataque DDoS masivo deja inaccesibles los sistemas de la Comisión Europea. Servidores inundados desde múltiples fuentes, servicios públicos e internos caídos.',notes:'Fuente: revista Ciberseguridad Pyme. Mensaje: si una institución con estos recursos puede caer, la pregunta es cuánto tiempo aguanta tu empresa, no si le va a pasar.',status:'pending',prod:'sinempezar',prodNote:'Pendiente de empezar. Tema: DDoS Comisión Europea 23 julio 2026 (ya confirmado).'},
+  {id:47,week:4,dayOffset:3,type:'linkedin',platforms:['LinkedIn'],title:'Post: El DDoS a la Comisión Europea y la lección de continuidad',desc:'Ataque DDoS masivo el 23 de julio deja caídos los sistemas de la Comisión Europea durante horas. La lección no es sobre la Comisión Europea, es sobre cuánto tiempo puede permitirse estar caída cualquier empresa.',notes:'CTA: ¿tiene tu empresa un plan de continuidad probado, no solo escrito?',status:'pending',prod:'sinempezar',prodNote:'Pendiente de redactar.'},
+  {id:48,week:4,dayOffset:4,type:'carrusel',platforms:['Reels','LinkedIn'],title:'Carrusel: Si usas SAP o ShareFile, esto es urgente',desc:'3 vulnerabilidades críticas de julio 2026: CVE-2026-27690 (SAP Approuter, contrabando HTTP, CVSS 9.1), CVE-2026-44761 (SAP Commerce Cloud, credenciales inseguras, CVSS 9.1), y apagado urgente de servidores Progress ShareFile.',notes:'5 slides: portada, vulnerabilidades SAP, ShareFile, por qué importa (CVSS 9.1 = crítico), cierre CTA auditoría de superficie expuesta.',status:'pending',prod:'sinempezar',prodNote:'Pendiente de empezar. Tema: parches críticos SAP + Progress ShareFile julio 2026.'},
+  {id:49,week:4,dayOffset:4,type:'animado',platforms:['Reels'],title:'Vídeo corto: ¿Cuántos de estos tienes sin parchear?',desc:'Pieza de apoyo (15s): lista de 3 vulnerabilidades apareciendo una a una en rojo, terminando con check verde al "aplicarse" el parche.',notes:'Apoyo del carrusel del día (viernes).',status:'pending',prod:'sinempezar',prodNote:'Pendiente de empezar. Pieza de apoyo corta.'},
+  {id:50,week:4,dayOffset:4,type:'linkedin',platforms:['LinkedIn'],title:'Post: 3 vulnerabilidades críticas que deberías tener ya resueltas',desc:'SAP publicó parches para NetWeaver y dos vulnerabilidades CVSS 9.1. Progress ordenó el apagado urgente de servidores ShareFile. No son fallos exóticos: son severidad crítica en software desplegado.',notes:'CTA: ¿tu equipo tiene un proceso de aplicación de parches con SLA definido?',status:'pending',prod:'sinempezar',prodNote:'Pendiente de redactar.'},
+  {id:51,week:4,dayOffset:5,type:'carrusel',platforms:['Reels','LinkedIn'],title:'Carrusel: Cómo funcionaba la red que robó 140 millones de euros',desc:'Policía española, con apoyo de Portugal y Panamá, desmantela red de fraude BEC y estafas de inversión. 4 detenidos, +800 cuentas bancarias, 3M€ congelados para víctimas.',notes:'6 slides: portada, la operación, cómo funciona el BEC, la red de cuentas, señales de alerta, cierre CTA simulación de fraude dirigido.',status:'pending',prod:'sinempezar',prodNote:'Pendiente de empezar. Tema: red de fraude BEC de 140M€ desmantelada.'},
+  {id:52,week:4,dayOffset:5,type:'animado',platforms:['Reels'],title:'Vídeo corto: 140 millones de euros. Ni una línea de malware.',desc:'Pieza de apoyo (15s): email con remitente normal que se transforma en uno casi idéntico (un carácter cambiado), flecha hacia una cuenta bancaria distinta.',notes:'Apoyo del carrusel del día (sábado).',status:'pending',prod:'sinempezar',prodNote:'Pendiente de empezar. Pieza de apoyo corta.'},
+  {id:53,week:4,dayOffset:5,type:'linkedin',platforms:['LinkedIn'],title:'Post: Desmantelada una red que defraudó 140 millones de euros con BEC',desc:'4 detenidos, +800 cuentas bancarias, 3M€ congelados. El BEC no necesita malware: suplantan el correo de un directivo o proveedor real y piden una transferencia urgente.',notes:'CTA: ¿tiene tu equipo de administración un protocolo de verificación para pagos urgentes?',status:'pending',prod:'sinempezar',prodNote:'Pendiente de redactar.'},
+  {id:54,week:4,dayOffset:6,type:'linkedin',platforms:['LinkedIn'],title:'Post largo: AEPD multa a Ibermutua — cuando el dato es de salud',desc:'La AEPD multa a Ibermutua con 600.000€ tras un error informático que envió datos personales (incluidos de salud) de 3.395 personas a 354 destinatarios. No fue un ciberataque, fue un fallo de configuración.',notes:'Formato thought leadership, cierre de la semana temática. CTA: empresas que tratan datos sensibles y nunca han auditado sus procesos internos.',status:'pending',prod:'sinempezar',prodNote:'Pendiente de redactar. Cierre de la semana temática.'},
+  {id:55,week:4,dayOffset:6,type:'carrusel',platforms:['Reels','LinkedIn'],title:'Carrusel recap (opcional): Lo que aprendimos esta semana',desc:'Recap de la semana: ransomware duplicado, Lidl y terceros, DDoS a la UE, parchea ya, fraude BEC desmantelado, Ibermutua y datos de salud + slide final CTA.',notes:'Usar Template_CarruselRecap.tsx — solo rellenar el array TEMAS con estos 6 puntos.',status:'pending',prod:'sinempezar',prodNote:'Pendiente de empezar. Pieza opcional de recap semanal.'},
 ];
 
 const TYPE_LABEL={linkedin:'Post LinkedIn',carrusel:'Carrusel Instagram',animado:'Vídeo animado',kike:'Vídeo',short:'Short vertical'};
 const TYPE_CLASS={linkedin:'badge-linkedin',carrusel:'badge-carrusel',animado:'badge-animado',kike:'badge-kike',short:'badge-short'};
 const DAYS=['Lunes','Martes','Miércoles','Jueves','Viernes','Sábado','Domingo'];
 
-let weekOffset=3,activeFilter='all',openCardId=null;
+let weekOffset=4,activeFilter='all',openCardId=null;
 const states={},prods={},prodNotes={};
 CONTENT.forEach(c=>{states[c.id]=c.status;prods[c.id]=c.prod;prodNotes[c.id]=c.prodNote;});
 
-// Semana 0 = 23 jun, Semana 1 = 30 jun, Semana 2 = 7 jul, Semana 3 = 14 jul (lunes 13 jul)
+// Semana 0 = 23 jun, Semana 1 = 30 jun, Semana 2 = 7 jul, Semana 3 = 14 jul, Semana 4 = 27 jul (lunes 27 jul)
 const WEEK_STARTS=[
   new Date(2026,5,23), // semana 0: 23-29 jun
   new Date(2026,5,30), // semana 1: 30 jun - 6 jul
   new Date(2026,6,7),  // semana 2: 7-13 jul
   new Date(2026,6,13), // semana 3: 13-19 jul (contenido publicable Mar 14 - Dom 19)
+  new Date(2026,6,27), // semana 4: 27 jul - 2 ago (contenido publicable Mar 28 - Dom 2 ago)
 ];
 function getMonday(offset=0){
   const idx=Math.max(0,Math.min(WEEK_STARTS.length-1,offset));
@@ -246,23 +263,23 @@ function openModal(id){
   openCardId=id;
   const st=states[id],prod=prods[id];
   document.getElementById('modalTitle').textContent=card.title;
-  document.getElementById('modalType').innerHTML=`<span class="type-badge ${TYPE_CLASS[card.type]}">${TYPE_LABEL[card.type]}</span>`;
+  document.getElementById('modalType').innerHTML=`<span class="type-badge \${TYPE_CLASS[card.type]}">\${TYPE_LABEL[card.type]}</span>`;
   document.getElementById('modalPlatforms').textContent=card.platforms.join(' · ');
   document.getElementById('modalDesc').textContent=card.desc;
   document.getElementById('modalNotes').textContent=card.notes;
-  document.getElementById('modalPipeline').innerHTML=PROD_STEPS.map(step=>`<button class="modal-prod-btn ${prod===step.key?step.cls:''}" onclick="setProd(${id},'${step.key}',event)">${step.label}</button>`).join('');
+  document.getElementById('modalPipeline').innerHTML=PROD_STEPS.map(step=>`<button class="modal-prod-btn \${prod===step.key?step.cls:''}" onclick="setProd(\${id},'\${step.key}',event)">\${step.label}</button>`).join('');
   const noteEl=document.getElementById('modalProdNote');
-  noteEl.className=`modal-prod-note note-${prod}`;
+  noteEl.className=`modal-prod-note note-\${prod}`;
   noteEl.textContent=prodNotes[id]||'';
   const ma=document.getElementById('modalActions');
   if(prod!=='listo'){
     ma.innerHTML=`<div style="font-family:var(--mono);font-size:0.75rem;color:var(--muted);padding:0.4rem 0;">Marca como "Listo para revisar" para poder aprobar o rechazar.</div>`;
   } else if(st==='pending'){
-    ma.innerHTML=`<button class="btn-approve" onclick="approve(${id})">✓ Aprobar</button><button class="btn-reject" onclick="reject(${id})">✕ Rechazar</button>`;
+    ma.innerHTML=`<button class="btn-approve" onclick="approve(\${id})">✓ Aprobar</button><button class="btn-reject" onclick="reject(\${id})">✕ Rechazar</button>`;
   } else {
     const lbl=st==='approved'?'✓ Aprobada':'✕ Rechazada';
     const cls=st==='approved'?'label-approved':'label-rejected';
-    ma.innerHTML=`<div class="status-label ${cls}" style="flex:1">${lbl}</div><button class="btn-undo" onclick="undo(${id})">↩ Deshacer</button>`;
+    ma.innerHTML=`<div class="status-label \${cls}" style="flex:1">\${lbl}</div><button class="btn-undo" onclick="undo(\${id})">↩ Deshacer</button>`;
   }
   document.getElementById('modalOverlay').classList.add('open');
 }
@@ -288,7 +305,7 @@ function render(){
     const col=document.createElement('div');col.className='day-col';
     const hdr=document.createElement('div');
     hdr.className='day-header'+(isToday?' today':'')+(isWeekend?' weekend':'');
-    hdr.innerHTML=`<span class="day-name">${DAYS[d]}</span><span class="day-date">${formatDate(date)}</span>`;
+    hdr.innerHTML=`<span class="day-name">\${DAYS[d]}</span><span class="day-date">\${formatDate(date)}</span>`;
     col.appendChild(hdr);
     const dayCards=CONTENT.filter(c=>c.week===weekOffset&&c.dayOffset===d&&matchesFilter(c));
     if(dayCards.length===0){
@@ -299,27 +316,27 @@ function render(){
       dayCards.forEach(card=>{
         const st=states[card.id],prod=prods[card.id];
         const el=document.createElement('div');
-        el.className=`card ${st}`;
+        el.className=`card \${st}`;
         el.onclick=()=>openModal(card.id);
-        const pipelineHTML=`<div class="prod-pipeline" onclick="event.stopPropagation()">${PROD_STEPS.map(step=>`<div class="prod-step ${prod===step.key?step.cls:''}" onclick="setProd(${card.id},'${step.key}',event)" title="${step.label}">${step.label}</div>`).join('')}</div>`;
-        const noteHTML=`<div class="prod-note note-${prod}" onclick="event.stopPropagation()">${prodNotes[card.id]||''}</div>`;
+        const pipelineHTML=`<div class="prod-pipeline" onclick="event.stopPropagation()">\${PROD_STEPS.map(step=>`<div class="prod-step \${prod===step.key?step.cls:''}" onclick="setProd(\${card.id},'\${step.key}',event)" title="\${step.label}">\${step.label}</div>`).join('')}</div>`;
+        const noteHTML=`<div class="prod-note note-\${prod}" onclick="event.stopPropagation()">\${prodNotes[card.id]||''}</div>`;
         let actionsHTML='';
         if(prod==='listo'){
           if(st==='pending'){
-            actionsHTML=`<div class="card-actions"><button class="btn-approve" onclick="approve(${card.id},event)">✓ Aprobar</button><button class="btn-reject" onclick="reject(${card.id},event)">✕ Rechazar</button></div>`;
+            actionsHTML=`<div class="card-actions"><button class="btn-approve" onclick="approve(\${card.id},event)">✓ Aprobar</button><button class="btn-reject" onclick="reject(\${card.id},event)">✕ Rechazar</button></div>`;
           } else {
             const lbl=st==='approved'?'✓ Aprobada':'✕ Rechazada';
             const cls=st==='approved'?'label-approved':'label-rejected';
-            actionsHTML=`<div class="card-actions"><div class="status-label ${cls}" style="flex:1">${lbl}</div><button class="btn-undo" onclick="undo(${card.id},event)">↩</button></div>`;
+            actionsHTML=`<div class="card-actions"><div class="status-label \${cls}" style="flex:1">\${lbl}</div><button class="btn-undo" onclick="undo(\${card.id},event)">↩</button></div>`;
           }
         }
-        const platformsHTML=card.platforms.map(p=>`<span class="platform">${p}</span>`).join('');
+        const platformsHTML=card.platforms.map(p=>`<span class="platform">\${p}</span>`).join('');
         el.innerHTML=`
-          <div class="card-top"><span class="type-badge ${TYPE_CLASS[card.type]}">${TYPE_LABEL[card.type]}</span><span class="status-dot dot-${st}"></span></div>
-          <div class="card-title">${card.title}</div>
-          ${pipelineHTML}${noteHTML}
-          <div class="platforms">${platformsHTML}</div>
-          ${actionsHTML}`;
+          <div class="card-top"><span class="type-badge \${TYPE_CLASS[card.type]}">\${TYPE_LABEL[card.type]}</span><span class="status-dot dot-\${st}"></span></div>
+          <div class="card-title">\${card.title}</div>
+          \${pipelineHTML}\${noteHTML}
+          <div class="platforms">\${platformsHTML}</div>
+          \${actionsHTML}`;
         col.appendChild(el);
       });
     }
