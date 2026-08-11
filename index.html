@@ -232,6 +232,7 @@ const CONTENT=[
 {id:65,week:5,dayOffset:4,type:'linkedin',platforms:['LinkedIn'],title:'Post: En España ocurren 3 ciberataques graves al día. La mayoría a pymes.',desc:'El 99,8% de las empresas españolas son pymes. Muchas se digitalizaron a toda velocidad post-COVID. Sin auditorías, sin MFA, sin plan de respuesta. El resultado: son el objetivo perfecto.',notes:'CTA: no hace falta un gran presupuesto para empezar — hace falta saber dónde estás.',status:'pending',prod:'sinempezar',prodNote:'Pendiente de redactar.'},
 {id:66,week:5,dayOffset:5,type:'carrusel',platforms:['Reels','LinkedIn'],title:'Carrusel recap: Lo que aprendimos esta semana',desc:'Recap de la semana: Inditex y el proveedor inactivo, sanidad bajo asedio, Puerto de Vigo desconectado, doble extorsión como estándar, y las pymes como objetivo preferido.',notes:'6 slides (una por tema) + cierre CTA diagnóstico QuantumSec. Formato reutilizable para stories.',status:'pending',prod:'sinempezar',prodNote:'Pendiente de empezar. Recap semanal.'},
 {id:67,week:5,dayOffset:6,type:'linkedin',platforms:['LinkedIn'],title:'Post largo: El ransomware en España — de amenaza lejana a epidemia cotidiana',desc:'Cierre de la semana temática sobre ransomware. De Inditex al Puerto de Vigo, de los hospitales a las pymes. La doble extorsión como estándar, las credenciales robadas como puerta de entrada y NIS2 como marco que ya no se puede ignorar.',notes:'Formato thought leadership. Publicar domingo 18:00. CTA: ¿está tu empresa preparada para los próximos 5 días — el tiempo medio que tiene un atacante antes de que lo detectes?',status:'pending',prod:'sinempezar',prodNote:'Pendiente de redactar. Cierre de la semana temática ransomware.'},
+
 ];
 
 const TYPE_LABEL={linkedin:'Post LinkedIn',carrusel:'Carrusel Instagram',animado:'Vídeo animado',kike:'Vídeo',short:'Short vertical'};
@@ -250,6 +251,7 @@ const WEEK_STARTS=[
   new Date(2026,6,13), // semana 3: 13-19 jul (contenido publicable Mar 14 - Dom 19)
   new Date(2026,6,27), // semana 4: 27 jul - 2 ago (contenido publicable Mar 28 - Dom 2 ago)
   new Date(2026,7,3), // semana 5: 4-10 ago
+  new Date(2026,7,10), // semana 6: 11-16 ago
 ];
 function getMonday(offset=0){
   const idx=Math.max(0,Math.min(WEEK_STARTS.length-1,offset));
