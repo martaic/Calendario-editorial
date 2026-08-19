@@ -165,7 +165,7 @@ const PROD_STEPS=[
   {key:'listo',label:'✓ Listo para revisar',cls:'active-listo'},
 ];
 const CONTENT=[
-  // ── SEMANA ACTUAL (23-29 jun) — solo finde
+
   {id:13,week:0,dayOffset:5,type:'kike',platforms:['LinkedIn','Reels'],title:'Kike: El factor diferencial de QuantumSec',desc:'.',notes:'Vídeo ya editado. Overlay con bullets animados. Pieza clave de marca.',status:'pending',prod:'enproduccion',prodNote:'Editado la velocidad de las animaciones.'},
   {id:3,week:0,dayOffset:6,type:'kike',platforms:['LinkedIn','Reels'],title:'Kike: Defacement — cuando hackean tu web',desc:'.',notes:'Vídeo ya editado. Comprobar overlay de ejemplos visuales.',status:'pending',prod:'enproduccion',prodNote:'Editado la velocidad de las animaciones.'},
 
@@ -233,6 +233,18 @@ const CONTENT=[
 {id:66,week:5,dayOffset:5,type:'carrusel',platforms:['Reels','LinkedIn'],title:'Carrusel recap: Lo que aprendimos esta semana',desc:'Recap de la semana: Inditex y el proveedor inactivo, sanidad bajo asedio, Puerto de Vigo desconectado, doble extorsión como estándar, y las pymes como objetivo preferido.',notes:'6 slides (una por tema) + cierre CTA diagnóstico QuantumSec. Formato reutilizable para stories.',status:'pending',prod:'sinempezar',prodNote:'Pendiente de empezar. Recap semanal.'},
 {id:67,week:5,dayOffset:6,type:'linkedin',platforms:['LinkedIn'],title:'Post largo: El ransomware en España — de amenaza lejana a epidemia cotidiana',desc:'Cierre de la semana temática sobre ransomware. De Inditex al Puerto de Vigo, de los hospitales a las pymes. La doble extorsión como estándar, las credenciales robadas como puerta de entrada y NIS2 como marco que ya no se puede ignorar.',notes:'Formato thought leadership. Publicar domingo 18:00. CTA: ¿está tu empresa preparada para los próximos 5 días — el tiempo medio que tiene un atacante antes de que lo detectes?',status:'pending',prod:'sinempezar',prodNote:'Pendiente de redactar. Cierre de la semana temática ransomware.'},
 
+// ── SEMANA 17-22 AGO
+{id:81,week:7,dayOffset:0,type:'animado',platforms:['Reels','LinkedIn'],title:'Vídeo animado: Ahorramás hackeado — el retail español sigue siendo el objetivo',desc:'Los supermercados Ahorramás se unen a la lista de empresas españolas atacadas en 2026. Endesa, Lidl, Decathlon, Inditex, Basic-Fit y ahora Ahorramás. El sector retail es el más golpeado del año.',notes:'Fuente: Channel Partner 2026. Patrón: mismo vector que los anteriores — proveedor o acceso externo. CTA: ¿tu empresa del sector retail tiene auditada su cadena de suministro?',status:'pending',prod:'sinempezar',prodNote:'Pendiente de empezar.'},
+{id:82,week:7,dayOffset:0,type:'linkedin',platforms:['LinkedIn'],title:'Post: Endesa, Lidl, Decathlon, Inditex, Basic-Fit, Ahorramás.',desc:'El retail español lleva un 2026 para olvidar en materia de ciberseguridad. Seis empresas atacadas, mismo patrón, mismo vector. ¿Cuándo aprende el sector?',notes:'CTA: la pregunta no es si te va a pasar — es cuándo y si estarás preparado.',status:'pending',prod:'sinempezar',prodNote:'Pendiente de redactar.'},
+{id:83,week:7,dayOffset:1,type:'animado',platforms:['Reels','LinkedIn'],title:'Vídeo animado: Pagas el rescate. Y aun así pierdes los datos.',desc:'Solo el 57% de las empresas que pagan un rescate de ransomware consiguen recuperar sus datos. El resto pierde el dinero Y la información. El ransomware moderno cifra, roba y extorsiona — en ese orden.',notes:'Fuente: Ransomware PYMEs España 2026. Dato clave: el 43% paga y no recupera nada. Doble extorsión ya es el estándar. CTA: la única defensa real es no depender de recuperar los datos — tener backups offline verificados.',status:'pending',prod:'sinempezar',prodNote:'Pendiente de empezar.'},
+{id:84,week:7,dayOffset:1,type:'linkedin',platforms:['LinkedIn'],title:'Post: El 43% de las empresas que pagan el rescate no recuperan sus datos.',desc:'Pagan. Y siguen sin datos. El ransomware moderno ya no es solo cifrado — primero roba, luego cifra, luego extorsiona. Pagar no garantiza nada.',notes:'CTA: la única defensa real es un backup offline verificado que el ransomware no alcance.',status:'pending',prod:'sinempezar',prodNote:'Pendiente de redactar.'},
+{id:85,week:7,dayOffset:2,type:'carrusel',platforms:['Reels','LinkedIn'],title:'Carrusel: La industria manufacturera — el objetivo que nadie vigila',desc:'Administraciones, telecomunicaciones, consumo e industria manufacturera son los sectores más atacados en España. Muchas empresas industriales no se creen objetivo pero están en el punto de mira por su posición en cadenas de suministro críticas.',notes:'6 slides: portada (el nuevo objetivo), por qué la industria, el efecto dominó en la cadena de suministro, vulnerabilidades típicas (sistemas OT/IT sin segmentar, legacy sin parchear), checklist industrial, CTA. Fuente: Qaracter, Check Point 2026.',status:'pending',prod:'sinempezar',prodNote:'Pendiente de empezar.'},
+{id:86,week:7,dayOffset:2,type:'linkedin',platforms:['LinkedIn'],title:'Post: Tu empresa industrial no es objetivo. Eso es exactamente lo que piensan el 99% de las víctimas.',desc:'La industria manufacturera es uno de los sectores más atacados en España en 2026. No por sus datos — por su posición en cadenas de suministro críticas. Si paras, para toda la cadena.',notes:'CTA: ¿tienes segmentada tu red OT de tu red IT? Es el primer paso.',status:'pending',prod:'sinempezar',prodNote:'Pendiente de redactar.'},
+{id:87,week:7,dayOffset:3,type:'animado',platforms:['Reels','LinkedIn'],title:'Vídeo animado: El 86% de las empresas no está preparada para la IA ofensiva',desc:'Solo el 14% de las organizaciones considera que está muy preparada para los riesgos de la IA generativa ofensiva en 2026. El 82% admite que está poco o nada preparada. Mientras tanto los atacantes ya la usan a diario.',notes:'Fuente: ISACA European Study 2026. Dato: la IA generativa permite a atacantes sin conocimientos técnicos lanzar ataques sofisticados. El gap de preparación es el mayor riesgo de 2026. CTA: ¿tiene tu empresa una política de uso de IA y de defensa ante IA ofensiva?',status:'pending',prod:'sinempezar',prodNote:'Pendiente de empezar.'},
+{id:88,week:7,dayOffset:3,type:'linkedin',platforms:['LinkedIn'],title:'Post: El 86% de las empresas admite que no está preparada para los ataques con IA.',desc:'Solo el 14% se considera preparada para los riesgos de la IA generativa ofensiva. Mientras tanto los atacantes ya la usan para phishing perfecto, deepfakes de voz y ataques automatizados a escala.',notes:'CTA: ¿tiene tu empresa una política de defensa ante IA ofensiva? Si no sabes qué es eso, es la señal.',status:'pending',prod:'sinempezar',prodNote:'Pendiente de redactar.'},
+{id:89,week:7,dayOffset:4,type:'carrusel',platforms:['Reels','LinkedIn'],title:'Carrusel: Brecha de género en ciberseguridad — el sector que no puede permitírsela',desc:'Solo el 20% del empleo en ciberseguridad en España corresponde a mujeres. El director general de INCIBE lo identificó como una de las mayores lacras del mercado. Con una demanda creciente de profesionales, el sector no puede permitirse dejar fuera al 50% del talento.',notes:'6 slides: el dato (20%), por qué importa para la seguridad nacional, la demanda de talento sin cubrir, qué está haciendo España (programas INCIBE, becas, formación), cómo entrar al sector sin ser ingeniera, CTA. Fuente: INCIBE, Cosmikal Q1 2026.',status:'pending',prod:'sinempezar',prodNote:'Pendiente de empezar.'},
+{id:90,week:7,dayOffset:4,type:'linkedin',platforms:['LinkedIn'],title:'Post: Solo 2 de cada 10 profesionales de ciberseguridad en España son mujeres.',desc:'El director general de INCIBE lo llamó una de las mayores lacras del mercado. Con miles de puestos sin cubrir y una amenaza creciente, el sector no puede permitirse dejar fuera al 50% del talento disponible.',notes:'CTA: si eres mujer y te interesa la ciberseguridad — nunca ha habido más demanda ni más caminos de entrada.',status:'pending',prod:'sinempezar',prodNote:'Pendiente de redactar.'},
+{id:91,week:7,dayOffset:5,type:'carrusel',platforms:['Reels','LinkedIn'],title:'Carrusel recap: Lo que aprendimos esta semana',desc:'Recap de la semana: Ahorramás y el retail, pagar el rescate no garantiza nada, la industria manufacturera en el punto de mira, el 86% sin preparación ante IA ofensiva y la brecha de género en ciberseguridad.',notes:'6 slides (una por tema) + cierre CTA. Formato reutilizable para stories.',status:'pending',prod:'sinempezar',prodNote:'Pendiente de empezar. Recap semanal semana 7.'},
 ];
 
 const TYPE_LABEL={linkedin:'Post LinkedIn',carrusel:'Carrusel Instagram',animado:'Vídeo animado',kike:'Vídeo',short:'Short vertical'};
@@ -243,15 +255,16 @@ let weekOffset=4,activeFilter='all',openCardId=null;
 const states={},prods={},prodNotes={};
 CONTENT.forEach(c=>{states[c.id]=c.status;prods[c.id]=c.prod;prodNotes[c.id]=c.prodNote;});
 
-// Semana 0 = 23 jun, Semana 1 = 30 jun, Semana 2 = 7 jul, Semana 3 = 14 jul, Semana 4 = 27 jul (lunes 27 jul)
+
 const WEEK_STARTS=[
-  new Date(2026,5,23), // semana 0: 23-29 jun
-  new Date(2026,5,30), // semana 1: 30 jun - 6 jul
-  new Date(2026,6,7),  // semana 2: 7-13 jul
-  new Date(2026,6,13), // semana 3: 13-19 jul (contenido publicable Mar 14 - Dom 19)
-  new Date(2026,6,27), // semana 4: 27 jul - 2 ago (contenido publicable Mar 28 - Dom 2 ago)
-  new Date(2026,7,3), // semana 5: 4-10 ago
-  new Date(2026,7,10), // semana 6: 11-16 ago
+  new Date(2026,5,23), 
+  new Date(2026,5,30), 
+  new Date(2026,6,7), 
+  new Date(2026,6,13),
+  new Date(2026,6,27), 
+  new Date(2026,7,3), 
+  new Date(2026,7,10), 
+  new Date(2026,7,17), 
 ];
 function getMonday(offset=0){
   const idx=Math.max(0,Math.min(WEEK_STARTS.length-1,offset));
